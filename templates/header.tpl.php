@@ -9,13 +9,13 @@ $uid = $GLOBALS['user']->uid;
         <div class="logo"><a href="http://partiufestival.com"><img src="<?php print base_path() . path_to_theme() ?>/img/logo-3.png" /></a></div>            
 
       <ul class="menu">
-        <li><a href="http://partiufestival.com/festivais">Pesquisar Festivais</a></li>
+          <li><a href="http://partiufestival.com/festivais">Pesquisar Festivais</a></li>
           <li><a href="#" data-toggle="modal" data-target="#cadastro-festivais">Envie um Festival</a></li>
           <?php if(!$user->uid){ ?>
-            <li><a class="cadastro" href="http://partiufestival.com/user/register">Cadastre-se</a></li>
+          <li><a class="cadastro" href="http://partiufestival.com/user/register">Cadastre-se</a></li>
           <?php } ?>
           <?php if($user->uid){ ?>
-            <li><a href="#" data-toggle="modal" data-target="#cadastro-excursoes">Cadastre uma Excursão</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#cadastro-excursoes">Cadastre uma Excursão</a></li>
           <?php } ?>
           <li><a href="#" data-toggle="modal" data-target="#form-contato">Contato</a></li>
       </ul>
@@ -31,25 +31,14 @@ $uid = $GLOBALS['user']->uid;
 
     </header> 
 
-    <div class="second-header">
-      <!--ul>
-        <li><a href="http://partiufestival.com/festivais">Pesquisar Festivais</a></li>
-          <li><a href="#" data-toggle="modal" data-target="#cadastro-festivais">Envie um Festival</a></li>
-          <?php if(!$user->uid){ ?>
-            <li><a class="cadastro" href="http://partiufestival.com/user/register">Cadastre-se</a></li>
-          <?php } ?>
-          <?php if($user->uid){ ?>
-            <li><a href="#" data-toggle="modal" data-target="#cadastro-excursoes">Cadastre uma Excursão</a></li>
-          <?php } ?>
-          <li><a href="#" data-toggle="modal" data-target="#form-contato">Contato</a></li>
-      </ul-->
+    <div class="second-header">     
 
        <div id="busca">
-              <?php
-                  $block = module_invoke('views', 'block_view', '-exp-festivais-page_1');
-                  print render($block['content']);
-              ?>
-            </div>
+          <?php
+              $block = module_invoke('views', 'block_view', '-exp-festivais-page_1');
+              print render($block['content']);
+          ?>
+        </div>
 
 
     </div> 
