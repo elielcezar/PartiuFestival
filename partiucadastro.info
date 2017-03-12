@@ -7,7 +7,8 @@ core = 7.x
 
 base theme = bootstrap
 
-stylesheets[all][] = css/landing-page.css
+stylesheets[all][] = css/geral.css
+
 
 regions[header] = Header
 regions[extras] = Extras

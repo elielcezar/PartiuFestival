@@ -1,0 +1,30 @@
+
+$amarelo1: #ffb536;
+$amarelo2: #e69a18;
+$salmao1: #f1603e;
+$salmao2: #e00007;
+$salmao3: #f18469;
+$marrom: #3b2b26;
+$marrom2: #19100e;
+$preto: #222;
+$cinza-claro: #efedee;
+
+
+@media(max-width:767px){
+	
+	header{
+		.logo{
+		    margin: auto;
+		    /* width: 210px; */
+		    //height: 91px;
+		    /* position: absolute; */
+		    /* float: left; */
+		    /* position: absolute; */
+		    /* left: 0; */
+		    /* top: 0; */
+		    display: inline-block;
+		    padding: 7px 20px;
+		}
+	}
+
+}
