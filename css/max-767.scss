@@ -11,20 +11,182 @@ $cinza-claro: #efedee;
 
 
 @media(max-width:767px){
+
+	#admin-menu{display: none !important;}
 	
 	header{
+		height: 153px;
 		.logo{
-		    margin: auto;
-		    /* width: 210px; */
-		    //height: 91px;
-		    /* position: absolute; */
-		    /* float: left; */
-		    /* position: absolute; */
-		    /* left: 0; */
-		    /* top: 0; */
-		    display: inline-block;
-		    padding: 7px 20px;
+			padding: 0;
+			margin: 10px 0 0 0;
+			width: 95px;
+			float: left;
+			img{max-width: 100%;}
+		}
+		.view-menu-usuario{
+			margin: 0;
+			position: absolute;
+			top: 20px;
+			right: 40px;
+			width: 55px;
+			.views-field-field-nome{display:none;}
+		}	
+		
+		.c-hamburger{top: 28px;}	
+
+		#block-commerce-cart-cart {
+			position: absolute;
+    		right: 100px;
+		}	
+
+		.view-commerce-cart-block{width: 100%;}
+		
+		.cadastrese{display: none;}
+
+		#busca{
+			width: 93%;
+		    margin: 76px 0 0 0;
+		    left: 0;
+		}
+		.menu {		    
+		    right: 0;
+		    top: 35px;
+		    z-index: 50;
 		}
 	}
+
+	.not-logged-in{
+		header{
+			#block-commerce-cart-cart {
+				position: absolute;
+	    		right: 55px;
+			}
+		}
+	}
+
+
+	/*--- HOME --------------------------------------------------------*/
+
+    .front{
+        .busca .busca-home {bottom: 20%;}
+        .content-section-a,
+        .content-section-b{text-align: center;}
+
+        .view-publicacoes-recentes{
+            .views-row{
+                width: 100%;
+                margin-top: 40px;
+                text-align: center;
+                padding: 5%;
+            }
+            .foto{
+                max-width: 100px;
+                margin: auto;
+                margin-top: -30px;
+            }
+        }
+        .proximos-festivais{
+        	padding: 0 15px;
+
+        	.info-festival{min-height: auto;}
+        }
+        .veja-mais{margin-bottom: 50px;}
+
+        .view-festivais-proximos-home .views-row{width: 100%;}
+
+        .mapa-festivais{display:none;}
+
+    }
+   
+    /*--- FESTIVAIS ----------------------------------------------------------*/
+    .page-festivais{
+    	#principal{
+    		margin: 0;
+    		overflow: hidden;
+    	}
+
+    	.info-festival{min-height: auto;}
+    }
+
+    /*--- INGRESSOS ----------------------------------------------------------*/
+    .page-ingressos{
+    	#principal{
+    		margin: 0;
+
+    		h1.page-title{ margin: 0 0 20px 0 !important;}
+
+    		.view-ingressos{
+    			.views-row {min-height: auto;}
+    		}
+    	}
+    }
+
+    /*--- INGRESSO INDIVIDUAL --------------------------------------------------*/
+
+    .node-type-ingresso{
+    	section.conteudo{
+    		.container{padding: 5px;}
+
+    		.panel-col-first,
+    		.panel-col-last{
+    			width: 100%;
+    			padding: 0;
+    		}
+
+    		.panel-col-first{
+    			.inside{margin: 0 0 0 10px;}
+    		}
+
+    		.card{padding: 10px 13px 10px 5px;}
+
+    		.pane-node-product-commerce-price{margin: -20px 0 20px 0;}
+
+    		#edit-line-item-fields--2 span.aviso{
+    			padding: 70px 0 0 0;
+    			background: transparent url(../img/icon_ticket.png) center 10px no-repeat;
+    		}
+    	}
+
+    	.cadastro-festival{display:none;}
+    	
+    }
+
+    /*--- LOGIN DO USUARIO ----------------------------------------------------*/
+
+    .page-user.not-logged-in {
+    	#principal{margin: 0;}
+    	.container{padding: 0;}
+
+    	.facebook-action-connect{
+    		width: 100%;
+    		overflow: hidden;
+    	}
+    }
+
+    /*--- PAGINA DO USUARIO ---------------------------------------------------*/
+    
+    .logged-in.page-user{
+    	#principal{margin: 0;}
+    }
+
+
+    /*--- RODAPE --------------------------------------------------------------*/
+
+    .cadastro-festival{
+    	text-align: center;
+    	h3 { text-align: center;}
+    	a.btn{width: 90%;}		 
+    }
+
+    footer{
+    	text-align: center;
+
+    	.container{margin: 0;}
+
+    	img.logo{
+    		margin: 0 auto 40px auto;
+    	}
+    }
+   
 
 }

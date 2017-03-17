@@ -1,13 +1,132 @@
 @media (max-width: 767px) {
-  header .logo {
+  #admin-menu {
+    display: none !important; }
+
+  header {
+    height: 153px; }
+    header .logo {
+      padding: 0;
+      margin: 10px 0 0 0;
+      width: 95px;
+      float: left; }
+      header .logo img {
+        max-width: 100%; }
+    header .view-menu-usuario {
+      margin: 0;
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      width: 55px; }
+      header .view-menu-usuario .views-field-field-nome {
+        display: none; }
+    header .c-hamburger {
+      top: 28px; }
+    header #block-commerce-cart-cart {
+      position: absolute;
+      right: 100px; }
+    header .view-commerce-cart-block {
+      width: 100%; }
+    header .cadastrese {
+      display: none; }
+    header #busca {
+      width: 93%;
+      margin: 76px 0 0 0;
+      left: 0; }
+    header .menu {
+      right: 0;
+      top: 35px;
+      z-index: 50; }
+
+  .not-logged-in header #block-commerce-cart-cart {
+    position: absolute;
+    right: 55px; }
+
+  /*--- HOME --------------------------------------------------------*/
+  .front .busca .busca-home {
+    bottom: 20%; }
+  .front .content-section-a,
+  .front .content-section-b {
+    text-align: center; }
+  .front .view-publicacoes-recentes .views-row {
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+    padding: 5%; }
+  .front .view-publicacoes-recentes .foto {
+    max-width: 100px;
     margin: auto;
-    /* width: 210px; */
-    /* position: absolute; */
-    /* float: left; */
-    /* position: absolute; */
-    /* left: 0; */
-    /* top: 0; */
-    display: inline-block;
-    padding: 7px 20px; } }
+    margin-top: -30px; }
+  .front .proximos-festivais {
+    padding: 0 15px; }
+    .front .proximos-festivais .info-festival {
+      min-height: auto; }
+  .front .veja-mais {
+    margin-bottom: 50px; }
+  .front .view-festivais-proximos-home .views-row {
+    width: 100%; }
+  .front .mapa-festivais {
+    display: none; }
+
+  /*--- FESTIVAIS ----------------------------------------------------------*/
+  .page-festivais #principal {
+    margin: 0;
+    overflow: hidden; }
+  .page-festivais .info-festival {
+    min-height: auto; }
+
+  /*--- INGRESSOS ----------------------------------------------------------*/
+  .page-ingressos #principal {
+    margin: 0; }
+    .page-ingressos #principal h1.page-title {
+      margin: 0 0 20px 0 !important; }
+    .page-ingressos #principal .view-ingressos .views-row {
+      min-height: auto; }
+
+  /*--- INGRESSO INDIVIDUAL --------------------------------------------------*/
+  .node-type-ingresso section.conteudo .container {
+    padding: 5px; }
+  .node-type-ingresso section.conteudo .panel-col-first,
+  .node-type-ingresso section.conteudo .panel-col-last {
+    width: 100%;
+    padding: 0; }
+  .node-type-ingresso section.conteudo .panel-col-first .inside {
+    margin: 0 0 0 10px; }
+  .node-type-ingresso section.conteudo .card {
+    padding: 10px 13px 10px 5px; }
+  .node-type-ingresso section.conteudo .pane-node-product-commerce-price {
+    margin: -20px 0 20px 0; }
+  .node-type-ingresso section.conteudo #edit-line-item-fields--2 span.aviso {
+    padding: 70px 0 0 0;
+    background: transparent url(../img/icon_ticket.png) center 10px no-repeat; }
+  .node-type-ingresso .cadastro-festival {
+    display: none; }
+
+  /*--- LOGIN DO USUARIO ----------------------------------------------------*/
+  .page-user.not-logged-in #principal {
+    margin: 0; }
+  .page-user.not-logged-in .container {
+    padding: 0; }
+  .page-user.not-logged-in .facebook-action-connect {
+    width: 100%;
+    overflow: hidden; }
+
+  /*--- PAGINA DO USUARIO ---------------------------------------------------*/
+  .logged-in.page-user #principal {
+    margin: 0; }
+
+  /*--- RODAPE --------------------------------------------------------------*/
+  .cadastro-festival {
+    text-align: center; }
+    .cadastro-festival h3 {
+      text-align: center; }
+    .cadastro-festival a.btn {
+      width: 90%; }
+
+  footer {
+    text-align: center; }
+    footer .container {
+      margin: 0; }
+    footer img.logo {
+      margin: 0 auto 40px auto; } }
 
 /*# sourceMappingURL=max-767.css.map */

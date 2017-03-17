@@ -4,20 +4,20 @@ html {
   height: 100%; }
 
 body {
-  background: #f5f5f5;
-  color: #3b2b26;
+  background: #f9f7f4;
+  color: #404040;
   font-family: 'Raleway', sans-serif; }
 
 a,
 a:active,
 a:link,
 a:visited {
-  color: #de5b47; }
+  color: #f4645f; }
   a:hover,
   a:active:hover,
   a:link:hover,
   a:visited:hover {
-    color: #3b2b26; }
+    color: #404040; }
 
 body,
 h1,
@@ -28,6 +28,18 @@ h5,
 h6 {
   font-family: 'Open Sans', Helvetica,Arial,sans-serif;
   font-weight: 400; }
+
+h1.page-title {
+  margin: 40px 0 60px 0 !important;
+  text-align: center; }
+  h1.page-title:after {
+    content: '';
+    display: block;
+    margin: auto;
+    width: 7%;
+    margin-top: 20px;
+    height: 5px;
+    background: #f4645f; }
 
 .card {
   background: #fff;
@@ -46,9 +58,9 @@ h6 {
       transition: all .3s; }
       .abas li a:hover {
         color: #fff;
-        background: #3b2b26; }
+        background: #404040; }
   .abas li.active a {
-    background: #de5b47;
+    background: #f4645f;
     color: #fff; }
 
 .table-responsive {
@@ -57,7 +69,7 @@ h6 {
 section.conteudo {
   float: left;
   width: 100%;
-  margin: 75px 0; }
+  margin: 50px 0; }
 
 /* FORMULARIOS */
 .modal {
@@ -124,8 +136,8 @@ a.btn,
 button.btn-primary,
 form input[type="submit"] {
   color: #ffffff;
-  background-color: #de5b47;
-  border-color: #e00007;
+  background-color: #f4645f;
+  border-color: #ea4830;
   display: inline-block;
   margin-bottom: 0;
   text-align: center;
@@ -146,9 +158,13 @@ form input[type="submit"] {
   padding: 6px 24px;
   border-width: 0 1px 4px 1px;
   text-transform: uppercase;
-  border-bottom: 2px solid #e00007;
+  border-bottom: 2px solid #ea4830;
   transition: all .3s;
-  font-weight: 400; }
+  font-weight: 400;
+  background: -webkit-linear-gradient(left top, #ea4830, #FF6666);
+  background: -o-linear-gradient(bottom right, #ea4830, #FF6666);
+  background: -moz-linear-gradient(bottom right, #ea4830, #FF6666);
+  background: linear-gradient(to bottom right, #ea4830, #FF6666); }
   button span,
   button.btn span,
   a.btn span,
@@ -167,7 +183,7 @@ button:focus,
 .btn-primary:active,
 .btn-primary.active,
 form input[type="submit"]:hover {
-  background: #3b2b26 !important;
+  background: #404040 !important;
   border-color: #222 !important;
   color: #fff !important;
   box-shadow: none !important;
@@ -176,7 +192,11 @@ form input[type="submit"]:hover {
 
 /*--- TOPO -----------------------------------------------------------------------*/
 header {
-  background: #de5b47;
+  background: #f4645f;
+  background: -webkit-linear-gradient(left top, #ea4830, #FF6666);
+  background: -o-linear-gradient(bottom right, #ea4830, #FF6666);
+  background: -moz-linear-gradient(bottom right, #ea4830, #FF6666);
+  background: linear-gradient(to bottom right, #ea4830, #FF6666);
   height: 91px;
   text-align: center;
   position: relative;
@@ -190,6 +210,14 @@ header {
   /* menu hamburguer */
   /* active state, i.e. menu open */
   /* menu conteudo */
+  /*.cadastro-festival{
+      float: right;
+      display: block;
+      width: auto;
+      margin: 10px 0 0 15px;
+      padding: 5px 10px;
+      font-size: 12px;
+  }*/
   /* busca*/ }
   header .container {
     position: relative; }
@@ -197,12 +225,12 @@ header {
   header a:active,
   header a:link,
   header a:visited {
-    color: #de5b47; }
+    color: #f4645f; }
     header a:hover,
     header a:active:hover,
     header a:link:hover,
     header a:visited:hover {
-      color: #3b2b26; }
+      color: #404040; }
   header ul {
     margin: 8px 0 0 0;
     float: left;
@@ -222,24 +250,23 @@ header {
     display: none; }
   header .logo {
     margin: auto;
-    width: 130px;
+    width: 150px;
     height: 91px;
-    float: left;
-    padding: 7px 0;
-    margin-left: 35px;
-    margin-top: 4px; }
+    position: absolute;
+    left: 0;
+    top: 10px; }
     header .logo img {
-      width: 130px; }
+      width: 150px; }
   header .c-hamburger {
     display: block;
     position: absolute;
     top: 31px;
-    left: 0;
+    right: 0;
     overflow: hidden;
     margin: 0;
-    padding: 0;
+    padding: 5px;
     width: 35px;
-    height: 30px;
+    height: 35px;
     font-size: 0;
     text-indent: -9999px;
     appearance: none;
@@ -248,47 +275,52 @@ header {
     border: none;
     cursor: pointer;
     transition: background 0.1s;
-    background: #de5b47; }
+    background: #f4645f; }
   header .c-hamburger:focus,
   header .c-hamburger:hover,
   header .c-hamburger:active {
     outline: none;
-    background-color: #de5b47 !important; }
+    height: 50px;
+    background: #f4645f !important; }
+    header .c-hamburger:focus span,
+    header .c-hamburger:focus span::before,
+    header .c-hamburger:focus span::after,
+    header .c-hamburger:hover span,
+    header .c-hamburger:hover span::before,
+    header .c-hamburger:hover span::after,
+    header .c-hamburger:active span,
+    header .c-hamburger:active span::before,
+    header .c-hamburger:active span::after {
+      background-color: #222 !important; }
   header .c-hamburger span {
     display: block;
     position: absolute;
     top: 13px;
     left: 0;
     right: 0;
-    height: 4px;
+    height: 3px;
     background: #fff;
     border-radius: 10px;
-    margin-right: 0; }
-    header .c-hamburger span:hover {
-      background-color: #fff; }
+    margin-right: 5px;
+    margin-left: 5px; }
   header .c-hamburger span::before,
   header .c-hamburger span::after {
     position: absolute;
     display: block;
     left: 0;
     width: 100%;
-    height: 4px;
+    height: 3px;
     background-color: #fff;
     content: "";
     border-radius: 10px; }
-    header .c-hamburger span::before:hover,
-    header .c-hamburger span::after:hover {
-      background-color: #fff; }
   header .c-hamburger span::before {
-    top: -10px; }
+    top: -8px; }
   header .c-hamburger span::after {
-    bottom: -10px; }
-  header .c-hamburger--htx span {
-    transition: background 0s 0.1s; }
+    bottom: -8px; }
   header .c-hamburger--htx span::before,
   header .c-hamburger--htx span::after {
-    transition-duration: 0.1s, 0.1s;
-    transition-delay: 0.1s, 0s; }
+    /*transition-duration: 0.1s, 0.1s;
+    transition-delay: 0.1s, 0s;*/ }
   header .c-hamburger--htx span::before {
     transition-property: top, transform; }
   header .c-hamburger--htx span::after {
@@ -300,7 +332,7 @@ header {
     header .c-hamburger--htx.is-active span,
     header .c-hamburger--htx.is-active span::after,
     header .c-hamburger--htx.is-active span::before {
-      background-color: #f18469; }
+      background-color: #fff; }
   header .menu {
     height: 0;
     padding: 0;
@@ -312,23 +344,28 @@ header {
     margin-left: 0;
     background: #fff;
     position: absolute;
-    left: 0;
-    top: 21px;
+    right: 0;
+    top: 30px;
     border-radius: 4px;
     font-size: 14px;
-    text-indent: 0; }
+    text-indent: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); }
     header .menu li {
       list-style-image: none;
       list-style-type: none;
       margin: 3px 0; }
       header .menu li a {
-        color: #de5b47;
-        text-transform: uppercase;
+        color: #f4645f;
+        text-transform: none;
         display: inline-block;
         width: 100%;
         padding: 10px 20px; }
         header .menu li a:hover {
-          color: #fff !important; }
+          color: #f4645f !important; }
+    header .menu li.minha-conta {
+      padding-top: 10px;
+      margin-top: 10px;
+      border-top: 1px solid #d2d2d2; }
   header .menu.is-active {
     height: auto;
     opacity: 1; }
@@ -337,7 +374,7 @@ header {
     header #block-commerce-cart-cart h2 {
       font-size: 14px;
       color: #fff;
-      background: #de5b47 url(../img/cart-icon.png) 9px 15px no-repeat;
+      background: #f4645f url(../img/cart-icon.png) 9px 15px no-repeat;
       display: inline-block;
       margin: 19px 0 0 0;
       text-align: center;
@@ -352,7 +389,7 @@ header {
       text-indent: -5000em;
       width: 50px; }
       header #block-commerce-cart-cart h2:hover {
-        background-color: #f18469; }
+        background-color: #ea4830; }
     header #block-commerce-cart-cart .cart-empty-block {
       display: none;
       position: absolute;
@@ -372,10 +409,12 @@ header {
       background: #fff;
       position: absolute;
       right: 0;
-      top: 60px;
+      top: 68px;
       text-align: left;
       padding: 0;
-      box-shadow: 0 0 12px #666; }
+      border-radius: 4px;
+      font-size: 14px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); }
       header #block-commerce-cart-cart .view-commerce-cart-block h2 {
         display: none; }
       header #block-commerce-cart-cart .view-commerce-cart-block a {
@@ -386,6 +425,21 @@ header {
       header #block-commerce-cart-cart .view-commerce-cart-block .ajax-shopping-cart-more-info {
         font-weight: bold;
         margin-top: 10px; }
+      header #block-commerce-cart-cart .view-commerce-cart-block .view-footer .links.list-inline {
+        width: 100%;
+        float: right;
+        margin: 15px 0 0 0;
+        padding: 0;
+        text-align: right; }
+      header #block-commerce-cart-cart .view-commerce-cart-block .view-footer a {
+        display: inline-block;
+        color: #fff;
+        background: #f4645f;
+        border-radius: 3px;
+        padding: 5px 10px;
+        margin: 0 0 0 5px; }
+        header #block-commerce-cart-cart .view-commerce-cart-block .view-footer a:hover {
+          background: #222; }
     header #block-commerce-cart-cart:hover {
       overflow: visible; }
       header #block-commerce-cart-cart:hover .view-commerce-cart-block {
@@ -398,7 +452,7 @@ header {
         padding: 15px; }
   header .cadastrese {
     float: right;
-    margin: 23px 0 0 5px;
+    margin: 23px 35px 0 5px;
     font-size: 12px;
     text-transform: uppercase; }
     header .cadastrese a {
@@ -410,83 +464,62 @@ header {
       color: #fff;
       border: none; }
       header .cadastrese .login:hover {
-        background: #de5b47;
+        background: #f4645f;
         color: #fff;
         text-decoration: underline; }
     header .cadastrese .cadastro {
       padding: 12px;
-      border-radius: 2px;
+      border-radius: 5px;
       color: #fff;
       margin-top: 0;
-      background: #fff;
-      color: #de5b47;
-      border: none; }
+      color: #fff;
+      border: 1px solid #fff; }
       header .cadastrese .cadastro:hover {
-        background: #de5b47;
+        background: #f4645f;
         color: #fff;
         text-decoration: none; }
-  header .cadastro-festival {
-    float: right;
-    display: block;
-    width: auto;
-    margin: 10px 0 0 15px;
-    padding: 5px 10px;
-    font-size: 12px; }
   header .view-menu-usuario {
     float: right;
-    margin: 23px 0 0 25px; }
+    margin: 20px 40px 0 0;
+    overflow: hidden;
+    position: relative;
+    width: 150px;
+    height: 50px;
+    cursor: pointer; }
     header .view-menu-usuario a {
       font-weight: normal;
       color: #fff; }
-    header .view-menu-usuario .nome {
+    header .view-menu-usuario .views-field-field-nome {
       float: left;
-      width: 75%;
-      padding: 7px 14px 0 0;
+      padding: 0;
+      margin: 0;
       cursor: pointer;
-      text-align: left; }
-    header .view-menu-usuario .foto {
+      position: absolute;
+      right: 50px;
+      top: 15px; }
+      header .view-menu-usuario .views-field-field-nome .editar-perfil {
+        display: none; }
+    header .view-menu-usuario .views-field-field-foto {
       width: 45px;
       float: right;
       max-width: 45px;
       margin: 5px 0; }
-      header .view-menu-usuario .foto img {
+      header .view-menu-usuario .views-field-field-foto img {
         max-width: 40px; }
-    header .view-menu-usuario .dropdown-menu {
-      display: block;
-      height: 0;
-      overflow: hidden;
-      opacity: 0;
-      padding: 0;
-      transition: all .3s;
-      border-radius: 4px; }
-    header .view-menu-usuario li.dropdown:hover {
-      background: #f18469; }
-      header .view-menu-usuario li.dropdown:hover .dropdown-menu {
-        opacity: 1;
-        height: auto; }
-        header .view-menu-usuario li.dropdown:hover .dropdown-menu a {
-          color: #de5b47;
-          padding: 10px; }
-          header .view-menu-usuario li.dropdown:hover .dropdown-menu a:hover {
-            color: #fff; }
-    header .view-menu-usuario li.dropdown > a {
-      padding: 15px 10px;
-      color: #fff; }
-    header .view-menu-usuario li.dropdown a:hover {
-      background: #19100e;
-      color: #fff; }
-    header .view-menu-usuario ul.dropdown-menu li a:hover {
-      background: #de5b47; }
-    header .view-menu-usuario:hover .menu {
-      height: auto;
-      opacity: 1; }
+  header .menu-usuario a:hover {
+    color: #f4645f; }
+  header .menu-usuario:hover {
+    overflow: visible; }
+    header .menu-usuario:hover ul.menu {
+      height: auto !important;
+      opacity: 1 !important; }
   header #busca {
-    width: 55%;
+    width: 50%;
     margin: 5px auto;
     position: absolute;
-    left: 55%;
+    left: 50%;
     top: 10px;
-    margin-left: -30%; }
+    margin-left: -25%; }
     header #busca label {
       display: none; }
     header #busca #edit-combine-wrapper {
@@ -495,11 +528,13 @@ header {
       padding-right: 0; }
     header #busca #edit-combine {
       height: 45px;
-      font-size: 16px;
+      font-size: 15px;
       font-style: italic;
       font-weight: normal;
       border-top-right-radius: 0;
-      border-bottom-right-radius: 0; }
+      border-bottom-right-radius: 0;
+      border: none;
+      padding: 10px 0 0 10px 8px; }
     header #busca #edit-field-data-value-wrapper,
     header #busca span.ou,
     header #busca #edit-sort-bef-combine-wrapper,
@@ -510,11 +545,11 @@ header {
       header #busca .views-submit-button button {
         margin-top: 0;
         height: 45px;
-        padding: 8px 21px;
+        padding: 8px 16px;
         float: left;
-        color: #fff;
-        background: #3b2b26;
-        border-bottom-color: #19100e;
+        color: #f4645f;
+        background: #fff;
+        border-bottom-color: #fff;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0; }
     header #busca .views-widget-sort-by {
@@ -525,18 +560,21 @@ header {
   width: 100%;
   padding: 0 0 5px 0;
   text-align: center;
-  background: #de5b47;
+  background: #f4645f;
   position: relative; }
 
-@media (max-width: 767px) {
-  .view-menu-usuario {
-    display: none; } }
-@media (max-width: 468px) {
-  header button > span {
-    display: none; }
-  header .cadastro-festival,
-  header .cadastrese {
-    display: none; } }
+/*@media(max-width:767px){
+    .view-menu-usuario{display: none;}
+}
+
+
+@media(max-width:468px){
+    header{
+        button > span{display: none;}
+        .cadastro-festival,
+        .cadastrese{display: none;}
+    } 
+}*/
 /*--- HOME -------------------------------------------------------------*/
 .front {
   background: #fff; }
@@ -925,12 +963,12 @@ header {
   text-align: center;
   margin-top: 25px; }
   .page-festivais .view-festivais .pagination a {
-    color: #de5b47; }
+    color: #f4645f; }
   .page-festivais .view-festivais .pagination li {
     display: inline-block; }
   .page-festivais .view-festivais .pagination .active > span {
-    background: #de5b47;
-    border-color: #de5b47; }
+    background: #f4645f;
+    border-color: #f4645f; }
 
 /* ajustes no claendario pop up */
 #ui-datepicker-div {
@@ -1008,7 +1046,7 @@ header {
       display: none; }
   .node-type-festival .aviso {
     width: 100%;
-    border: 2px solid #de5b47;
+    border: 2px solid #f4645f;
     text-align: center;
     padding: 50px;
     float: left;
@@ -1020,13 +1058,14 @@ header {
     margin-bottom: 25px; }
     .node-type-festival .view-festival-sobre h2 {
       display: none; }
-    .node-type-festival .view-festival-sobre span.date-display-single {
-      padding: 5px 0;
+    .node-type-festival .view-festival-sobre span.date-display-single,
+    .node-type-festival .view-festival-sobre .date-display-range {
+      padding: 10px 0;
       display: block;
       width: 100%;
       border-bottom: 1px solid #eee;
       border-top: 1px solid #eee;
-      margin-bottom: 10px; }
+      margin: 20px 0; }
     .node-type-festival .view-festival-sobre .date-display-remaining {
       font-weight: bold;
       margin-bottom: 40px; }
@@ -1039,8 +1078,8 @@ header {
       padding: 15px 0; }
     .node-type-festival .view-festival-sobre .btn.secundario {
       background: #fff;
-      border: 2px solid #de5b47;
-      color: #de5b47; }
+      border: 2px solid #f4645f;
+      color: #f4645f; }
   .node-type-festival h2 {
     font-weight: 600;
     letter-spacing: -1px;
@@ -1082,7 +1121,7 @@ header {
       .node-type-festival .abas .nav-tabs li.active a {
         background-position: 50% -104px; }
         .node-type-festival .abas .nav-tabs li.active a:hover {
-          background-color: #de5b47;
+          background-color: #f4645f;
           color: #fff; }
       .node-type-festival .abas .nav-tabs li.sobre a {
         background-image: url(../img/icon_infofestival.png); }
@@ -1115,7 +1154,7 @@ header {
       margin: 0 0 15px 0;
       text-align: left;
       font-size: 18px;
-      color: #3b2b26;
+      color: #404040;
       border-bottom: 1px solid #efedee; }
     .node-type-festival .container-form .block-formblock {
       padding: 0 25px; }
@@ -1198,7 +1237,7 @@ header {
   .node-type-festival .view-publicacoes-recentes-festival2 .view-filters {
     width: 100%;
     padding: 15px 10px 10px 10px;
-    background: #de5b47;
+    background: #f4645f;
     color: #fff;
     margin-top: 20px;
     margin-bottom: 0; }
@@ -1225,8 +1264,8 @@ header {
       .node-type-festival .conteudo .postagens .card:hover {
         box-shadow: 0 0 15px #ccc; }
     .node-type-festival .conteudo .postagens .tipo {
-      border: 2px solid #de5b47;
-      color: #de5b47;
+      border: 2px solid #f4645f;
+      color: #f4645f;
       width: auto;
       display: inline-block;
       padding: 5px 10px;
@@ -1284,8 +1323,8 @@ header {
       .node-type-festival .conteudo .view-publicacoes-recentes-festival2 .views-row .views-field.views-field-ajax-comment .use-ajax-comments {
         display: block;
         width: 25%;
-        color: #de5b47;
-        border: 1px solid #de5b47;
+        color: #f4645f;
+        border: 1px solid #f4645f;
         text-align: center;
         border-radius: 5px;
         padding: 5px;
@@ -1294,7 +1333,7 @@ header {
         transition: all .3s; }
         .node-type-festival .conteudo .tab-content .views-row .views-field.views-field-ajax-comment .use-ajax-comments:hover,
         .node-type-festival .conteudo .view-publicacoes-recentes-festival2 .views-row .views-field.views-field-ajax-comment .use-ajax-comments:hover {
-          background: #de5b47;
+          background: #f4645f;
           color: #fff; }
       .node-type-festival .conteudo .tab-content .views-row p.mensagem,
       .node-type-festival .conteudo .view-publicacoes-recentes-festival2 .views-row p.mensagem {
@@ -1323,7 +1362,7 @@ header {
       opacity: 1; }
     .node-type-festival .conteudo .view-empty {
       width: 100%;
-      border: 2px solid #de5b47;
+      border: 2px solid #f4645f;
       text-align: center;
       padding: 25px;
       font-style: italic; }
@@ -1444,6 +1483,11 @@ header {
   display: none; }
 
 /*--- EDITAR UM FESTIVAL ----------------------------------------------------------------*/
+.page-node-edit.node-type-festival .shortcuts {
+  display: none; }
+.page-node-edit.node-type-festival .region-content {
+  float: left;
+  width: 100%; }
 .page-node-edit.node-type-festival #block-system-main {
   margin: 50px auto 0 auto;
   max-width: 1100px;
@@ -1630,89 +1674,92 @@ header {
 .node-type-ingresso,
 .node-type-produto-externo {
   /* mensagem do carrinho */ }
-  .node-type-ingresso .conteudo,
-  .node-type-produto-externo .conteudo {
+  .node-type-ingresso section.conteudo,
+  .node-type-produto-externo section.conteudo {
     float: left;
-    width: 100%; }
-    .node-type-ingresso .conteudo .panel-col-first,
-    .node-type-produto-externo .conteudo .panel-col-first {
+    width: 100%;
+    margin: 25px 0 !important; }
+    .node-type-ingresso section.conteudo .panel-col-first,
+    .node-type-produto-externo section.conteudo .panel-col-first {
       padding-right: 2%; }
-    .node-type-ingresso .conteudo .panel-col-last,
-    .node-type-produto-externo .conteudo .panel-col-last {
+    .node-type-ingresso section.conteudo .panel-col-last,
+    .node-type-produto-externo section.conteudo .panel-col-last {
       padding-left: 2%; }
-    .node-type-ingresso .conteudo .views-field-commerce-price span,
-    .node-type-ingresso .conteudo .views-field-field-commerce-saleprice span,
-    .node-type-produto-externo .conteudo .views-field-commerce-price span,
-    .node-type-produto-externo .conteudo .views-field-field-commerce-saleprice span {
+    .node-type-ingresso section.conteudo .views-field-commerce-price span,
+    .node-type-ingresso section.conteudo .views-field-field-commerce-saleprice span,
+    .node-type-produto-externo section.conteudo .views-field-commerce-price span,
+    .node-type-produto-externo section.conteudo .views-field-field-commerce-saleprice span {
       margin-right: 15px; }
-    .node-type-ingresso .conteudo .views-field-commerce-price div,
-    .node-type-ingresso .conteudo .views-field-field-commerce-saleprice div,
-    .node-type-produto-externo .conteudo .views-field-commerce-price div,
-    .node-type-produto-externo .conteudo .views-field-field-commerce-saleprice div {
+    .node-type-ingresso section.conteudo .views-field-commerce-price div,
+    .node-type-ingresso section.conteudo .views-field-field-commerce-saleprice div,
+    .node-type-produto-externo section.conteudo .views-field-commerce-price div,
+    .node-type-produto-externo section.conteudo .views-field-field-commerce-saleprice div {
       display: inline-block; }
-    .node-type-ingresso .conteudo h1,
-    .node-type-produto-externo .conteudo h1 {
+    .node-type-ingresso section.conteudo h1,
+    .node-type-produto-externo section.conteudo h1 {
       font-weight: 600;
       margin-bottom: 40px; }
-    .node-type-ingresso .conteudo .pane-node-product-commerce-price,
-    .node-type-produto-externo .conteudo .pane-node-product-commerce-price {
+    .node-type-ingresso section.conteudo .pane-node-product-commerce-price,
+    .node-type-produto-externo section.conteudo .pane-node-product-commerce-price {
       font-size: 18px;
       margin-bottom: 50px; }
-    .node-type-ingresso .conteudo .views-field-commerce-price,
-    .node-type-produto-externo .conteudo .views-field-commerce-price {
+    .node-type-ingresso section.conteudo .views-field-commerce-price,
+    .node-type-produto-externo section.conteudo .views-field-commerce-price {
       font-size: 16px;
       color: #999;
       margin-top: 20px; }
-      .node-type-ingresso .conteudo .views-field-commerce-price span, .node-type-ingresso .conteudo .views-field-commerce-price div,
-      .node-type-produto-externo .conteudo .views-field-commerce-price span,
-      .node-type-produto-externo .conteudo .views-field-commerce-price div {
+      .node-type-ingresso section.conteudo .views-field-commerce-price span, .node-type-ingresso section.conteudo .views-field-commerce-price div,
+      .node-type-produto-externo section.conteudo .views-field-commerce-price span,
+      .node-type-produto-externo section.conteudo .views-field-commerce-price div {
         text-decoration: line-through; }
-    .node-type-ingresso .conteudo .views-field-field-commerce-saleprice,
-    .node-type-produto-externo .conteudo .views-field-field-commerce-saleprice {
+    .node-type-ingresso section.conteudo .views-field-field-commerce-saleprice,
+    .node-type-produto-externo section.conteudo .views-field-field-commerce-saleprice {
       font-weight: bold;
       font-size: 16px;
       margin-bottom: 20px; }
-    .node-type-ingresso .conteudo #edit-line-item-fields--2,
-    .node-type-produto-externo .conteudo #edit-line-item-fields--2 {
+    .node-type-ingresso section.conteudo #edit-line-item-fields--2,
+    .node-type-produto-externo section.conteudo #edit-line-item-fields--2 {
       background: #f5f5f5;
       padding: 3% 5% 5% 5%;
       border: 1px solid #d2d2d2;
       border-radius: 5px; }
-      .node-type-ingresso .conteudo #edit-line-item-fields--2 span.aviso,
-      .node-type-produto-externo .conteudo #edit-line-item-fields--2 span.aviso {
+      .node-type-ingresso section.conteudo #edit-line-item-fields--2 span.aviso,
+      .node-type-produto-externo section.conteudo #edit-line-item-fields--2 span.aviso {
         display: inline-block;
         margin-bottom: 20px;
-        font-size: 13px; }
-    .node-type-ingresso .conteudo .field-name-field-link,
-    .node-type-produto-externo .conteudo .field-name-field-link {
+        font-size: 13px;
+        padding-left: 60px;
+        background: transparent url(../img/icon_ticket.png) left center no-repeat; }
+    .node-type-ingresso section.conteudo .field-name-field-link,
+    .node-type-produto-externo section.conteudo .field-name-field-link {
       margin: 40px 0; }
-      .node-type-ingresso .conteudo .field-name-field-link a,
-      .node-type-produto-externo .conteudo .field-name-field-link a {
+      .node-type-ingresso section.conteudo .field-name-field-link a,
+      .node-type-produto-externo section.conteudo .field-name-field-link a {
         color: #ffffff;
-        background-color: #de5b47;
-        border-color: #e00007;
+        background-color: #f4645f;
+        border-color: #ea4830;
         display: inline-block;
         cursor: pointer;
         border-radius: 4px;
         padding: 6px 24px;
         border-width: 0 1px 4px 1px;
         text-transform: uppercase;
-        border-bottom: 2px solid #e00007;
+        border-bottom: 2px solid #ea4830;
         transition: all .3s;
         font-weight: 400; }
-    .node-type-ingresso .conteudo .form-item-quantity,
-    .node-type-produto-externo .conteudo .form-item-quantity {
+    .node-type-ingresso section.conteudo .form-item-quantity,
+    .node-type-produto-externo section.conteudo .form-item-quantity {
       width: 185px;
       float: left; }
-      .node-type-ingresso .conteudo .form-item-quantity label,
-      .node-type-produto-externo .conteudo .form-item-quantity label {
+      .node-type-ingresso section.conteudo .form-item-quantity label,
+      .node-type-produto-externo section.conteudo .form-item-quantity label {
         display: inline-block; }
-      .node-type-ingresso .conteudo .form-item-quantity input,
-      .node-type-produto-externo .conteudo .form-item-quantity input {
+      .node-type-ingresso section.conteudo .form-item-quantity input,
+      .node-type-produto-externo section.conteudo .form-item-quantity input {
         display: inline-block;
         width: 70px; }
-    .node-type-ingresso .conteudo button,
-    .node-type-produto-externo .conteudo button {
+    .node-type-ingresso section.conteudo button,
+    .node-type-produto-externo section.conteudo button {
       width: 50%;
       height: 37px;
       margin-bottom: 75px; }
@@ -1735,13 +1782,13 @@ header {
     .node-type-ingresso .add-cart-message-wrapper .option-button.checkout,
     .node-type-produto-externo .add-cart-message-wrapper .option-button.checkout {
       color: #fff;
-      background-color: #de5b47;
-      border-color: #e00007;
+      background-color: #f4645f;
+      border-color: #ea4830;
       border-radius: 4px;
       padding: 12px 24px;
       border-width: 0 1px 4px 1px;
       text-transform: uppercase;
-      border-bottom: 2px solid #e00007;
+      border-bottom: 2px solid #ea4830;
       transition: all .3s;
       font-weight: 400; }
       .node-type-ingresso .add-cart-message-wrapper .option-button.checkout a,
@@ -1749,12 +1796,12 @@ header {
         color: #fff; }
     .node-type-ingresso .add-cart-message-wrapper .option-button.continue,
     .node-type-produto-externo .add-cart-message-wrapper .option-button.continue {
-      color: #de5b47;
+      color: #f4645f;
       background-color: #fff;
-      border-color: #de5b47;
+      border-color: #f4645f;
       border-radius: 4px;
       padding: 6px 24px;
-      border: 2px solid #de5b47;
+      border: 2px solid #f4645f;
       text-transform: uppercase;
       transition: all .3s;
       font-weight: 400; }
@@ -1769,6 +1816,8 @@ header {
     text-align: center;
     margin: 50px 0;
     font-weight: 600; }
+  .page-cart .conteudo .cart-empty-page {
+    text-align: center; }
 
 /*--- CHECKOUT ---------------------------------------------------------------------*/
 .page-checkout h1 {
@@ -1778,10 +1827,22 @@ header {
   float: left;
   width: 100%;
   padding: 25px 0 50px 0; }
+.page-checkout .account_form .cart_contents {
+  display: none; }
+.page-checkout #edit-account-form #edit-account-form-cart-contents {
+  display: none; }
 .page-checkout #commerce-shipping-service-ajax-wrapper {
   margin-bottom: 20px; }
 .page-checkout .form-item.form-item-customer-profile-shipping-commerce-customer-address-und-0-country {
   display: none; }
+.page-checkout .commerce_payment #edit-commerce-payment-payment-method {
+  float: left; }
+.page-checkout .commerce_payment #payment-details {
+  float: right;
+  width: 70%;
+  margin: 0 0 40px 0; }
+  .page-checkout .commerce_payment #payment-details h3 {
+    margin-top: 5px; }
 .page-checkout .checkout-buttons span.button-operator,
 .page-checkout .checkout-buttons .checkout-cancel {
   display: none; }
@@ -1809,11 +1870,17 @@ header {
 
 /*--- PAGINA DE UM USUARIO ----------------------------------------------------------*/
 .page-user.logged-in .header {
-  min-height: 350px;
+  min-height: 250px;
   background-position: top center;
   background-repeat: repeat-x;
   background-size: auto 100%;
   background-color: #999; }
+.page-user.logged-in #principal {
+  width: 100%;
+  float: left;
+  margin: 50px 0; }
+.page-user.logged-in .container {
+  padding: 0; }
 .page-user.logged-in .nav-tabs {
   display: none; }
 .page-user.logged-in .capa img {
@@ -1822,7 +1889,9 @@ header {
   margin: -50px 0 25px 0;
   padding-bottom: 75px;
   text-align: center;
-  position: relative; }
+  position: relative;
+  border-radius: 0;
+  border-top: none; }
   .page-user.logged-in .basic-info img.img-circle {
     max-width: 200px;
     border: 4px solid #fff;
@@ -1859,70 +1928,110 @@ header {
     margin-bottom: 25px; }
 
 /*--- EDITAR USUARIO ---------------------------------------------------------------*/
-.page-user-edit .nav-tabs {
-  display: block !important; }
-.page-user-edit .conteudo {
-  margin: 50px auto 0 auto;
-  max-width: 700px;
+.page-user-edit .shortcuts,
+.page-user-me-edit .shortcuts {
+  display: block;
+  float: left;
+  width: 100%; }
+.page-user-edit #principal,
+.page-user-me-edit #principal {
+  float: left;
+  width: 100%;
+  margin: 50px 0; }
+.page-user-edit .conteudo,
+.page-user-me-edit .conteudo {
+  margin: 0 auto;
   padding: 25px;
   background: #fff;
+  width: 100%;
+  max-width: 700px;
   /* facebook connect */
   /* foto */
   /* imagem de capa */
   /* data de nascimento */
   /* sexo */
   /* outros filedsets */ }
-  .page-user-edit .conteudo .form-wrapper.form-group {
+  .page-user-edit .conteudo #block-system-main,
+  .page-user-me-edit .conteudo #block-system-main {
+    background: #fff;
+    padding: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    max-width: 1170px;
+    margin: auto; }
+  .page-user-edit .conteudo .form-wrapper.form-group,
+  .page-user-me-edit .conteudo .form-wrapper.form-group {
     padding-bottom: 10px;
     margin-bottom: 10px; }
-  .page-user-edit .conteudo .form-wrapper.form-group:last-child {
+  .page-user-edit .conteudo .form-wrapper.form-group:last-child,
+  .page-user-me-edit .conteudo .form-wrapper.form-group:last-child {
     border-bottom: none; }
-  .page-user-edit .conteudo #edit-fboauth {
+  .page-user-edit .conteudo #edit-fboauth,
+  .page-user-me-edit .conteudo #edit-fboauth {
     margin-bottom: 25px; }
-    .page-user-edit .conteudo #edit-fboauth .facebook-action-connect {
+    .page-user-edit .conteudo #edit-fboauth .facebook-action-connect,
+    .page-user-me-edit .conteudo #edit-fboauth .facebook-action-connect {
       display: inline-block;
       height: 40px;
       margin: 20px 0 10px 0;
       text-indent: -5000em;
       width: 306px;
       background: transparent url(../img/btn-login-facebook.png) 0 -40px no-repeat; }
-      .page-user-edit .conteudo #edit-fboauth .facebook-action-connect:hover {
+      .page-user-edit .conteudo #edit-fboauth .facebook-action-connect:hover,
+      .page-user-me-edit .conteudo #edit-fboauth .facebook-action-connect:hover {
         background: transparent url(../img/btn-login-facebook.png) 0 0 no-repeat; }
-    .page-user-edit .conteudo #edit-fboauth label {
+    .page-user-edit .conteudo #edit-fboauth label,
+    .page-user-me-edit .conteudo #edit-fboauth label {
       padding: 20px 15px 0 0;
       margin-left: 0;
       display: block;
       float: left; }
-    .page-user-edit .conteudo #edit-fboauth .description {
+    .page-user-edit .conteudo #edit-fboauth .description,
+    .page-user-me-edit .conteudo #edit-fboauth .description {
       font-size: 12px;
       margin-top: 0; }
-  .page-user-edit .conteudo .simplecrop-widget-data {
+  .page-user-edit .conteudo .simplecrop-widget-data,
+  .page-user-me-edit .conteudo .simplecrop-widget-data {
     margin-top: 20px; }
-  .page-user-edit .conteudo #edit-profile-main-field-imagem-de-capa {
+  .page-user-edit .conteudo #edit-profile-main-field-imagem-de-capa,
+  .page-user-me-edit .conteudo #edit-profile-main-field-imagem-de-capa {
     margin-bottom: 25px; }
     .page-user-edit .conteudo #edit-profile-main-field-imagem-de-capa .image-preview,
-    .page-user-edit .conteudo #edit-profile-main-field-imagem-de-capa .image-widget-data {
+    .page-user-edit .conteudo #edit-profile-main-field-imagem-de-capa .image-widget-data,
+    .page-user-me-edit .conteudo #edit-profile-main-field-imagem-de-capa .image-preview,
+    .page-user-me-edit .conteudo #edit-profile-main-field-imagem-de-capa .image-widget-data {
       float: left;
       width: 100%; }
-  .page-user-edit .conteudo .field-name-field-data-de-nascimento fieldset {
+  .page-user-edit .conteudo .field-name-field-data-de-nascimento fieldset,
+  .page-user-me-edit .conteudo .field-name-field-data-de-nascimento fieldset {
     border: none;
     padding-left: 0; }
-  .page-user-edit .conteudo .field-name-field-data-de-nascimento legend {
+  .page-user-edit .conteudo .field-name-field-data-de-nascimento legend,
+  .page-user-me-edit .conteudo .field-name-field-data-de-nascimento legend {
     background: transparent;
     padding: 0; }
-  .page-user-edit .conteudo .field-name-field-data-de-nascimento .panel-body {
+  .page-user-edit .conteudo .field-name-field-data-de-nascimento .panel-body,
+  .page-user-me-edit .conteudo .field-name-field-data-de-nascimento .panel-body {
     border: none;
     padding: 0; }
-  .page-user-edit .conteudo .field-name-field-data-de-nascimento .form-text {
+  .page-user-edit .conteudo .field-name-field-data-de-nascimento .form-text,
+  .page-user-me-edit .conteudo .field-name-field-data-de-nascimento .form-text {
     max-width: 200px; }
-  .page-user-edit .conteudo .form-item-profile-main-field-sexo-und:first-child.radio {
+  .page-user-edit .conteudo .form-item-profile-main-field-sexo-und:first-child.radio,
+  .page-user-me-edit .conteudo .form-item-profile-main-field-sexo-und:first-child.radio {
     display: none; }
   .page-user-edit .conteudo #edit-profile-main-redirect,
   .page-user-edit .conteudo #edit-locale,
   .page-user-edit .conteudo #edit-timezone,
   .page-user-edit .conteudo #edit-ckeditor,
   .page-user-edit .conteudo #edit-redirect,
-  .page-user-edit .conteudo #edit-metatags {
+  .page-user-edit .conteudo #edit-metatags,
+  .page-user-me-edit .conteudo #edit-profile-main-redirect,
+  .page-user-me-edit .conteudo #edit-locale,
+  .page-user-me-edit .conteudo #edit-timezone,
+  .page-user-me-edit .conteudo #edit-ckeditor,
+  .page-user-me-edit .conteudo #edit-redirect,
+  .page-user-me-edit .conteudo #edit-metatags {
     display: none; }
 
 /*--- CANCELAR CONTA DE USUARIO -------------------------------------------------------*/
@@ -2008,9 +2117,112 @@ body.page-legal-accept .conteudo {
     margin-top: 25px; }
 
 /*--- PAGINA DE UM INGRESSO / TICKET --------------------------------------------*/
+.ticket-individual .view-ticket-individual-voucher .ticket-print {
+  position: relative;
+  border: 1px solid #e3e3e3;
+  width: 100%;
+  float: left;
+  padding: 25px;
+  margin-bottom: 50px; }
+  .ticket-individual .view-ticket-individual-voucher .ticket-print .item {
+    width: 100%;
+    float: left;
+    text-transform: uppercase;
+    margin-bottom: 10px; }
+    .ticket-individual .view-ticket-individual-voucher .ticket-print .item span.item-label {
+      float: left;
+      display: inline-block;
+      font-weight: bold;
+      margin-right: 10px; }
+  .ticket-individual .view-ticket-individual-voucher .ticket-print .titulo {
+    font-size: 32px;
+    margin: 30px 0;
+    text-transform: none; }
+    .ticket-individual .view-ticket-individual-voucher .ticket-print .titulo .views-label {
+      display: none; }
+.ticket-individual .view-ticket-individual-voucher h4 {
+  font-weight: bold; }
+.ticket-individual .view-ticket-individual-voucher .instrucoes {
+  /*padding: 5%;
+  background-color: #f5f5f5;
+  border: 1px solid #eee;*/ }
+.ticket-individual .imprimir {
+  width: 100%;
+  float: left;
+  text-align: center;
+  margin: 50px 0;
+  padding: 20px 0; }
+  .ticket-individual .imprimir a {
+    width: 30%;
+    padding: 2%; }
+
+@media print {
+  .ticket-individual header,
+  .ticket-individual h1,
+  .ticket-individual .cadastro-festival,
+  .ticket-individual .imprimir,
+  .ticket-individual footer {
+    display: none; }
+  .ticket-individual section.conteudo {
+    margin: 0; }
+  .ticket-individual .card {
+    border: none; }
+  .ticket-individual .ticket-extras {
+    font-size: 11px; } }
+/*--- PEDIDOS DE UM USUARIO ---------------------------------------------------*/
+.page-meus-pedidos .conteudo h1 {
+  text-align: center;
+  margin: 0 0 25px 0; }
+.page-meus-pedidos .conteudo .view-pedidos-usuario .view-empty {
+  text-align: center; }
+
+/*--- VENDAS POR USUARIO ------------------------------------------------------*/
+.page-minhas-vendas #edit-title-wrapper {
+  margin-bottom: 50px; }
+  .page-minhas-vendas #edit-title-wrapper label {
+    display: block; }
+.page-minhas-vendas .view-empty {
+  text-align: center; }
+.page-minhas-vendas .imprimir {
+  width: 100%;
+  float: left;
+  text-align: center;
+  margin: 25px 0; }
+  .page-minhas-vendas .imprimir a {
+    /*width: 30%;
+    padding: 2%;*/ }
+
+@media print {
+  .page-minhas-vendas header,
+  .page-minhas-vendas h1,
+  .page-minhas-vendas .cadastro-festival,
+  .page-minhas-vendas .imprimir,
+  .page-minhas-vendas .view-filters,
+  .page-minhas-vendas footer {
+    display: none; }
+  .page-minhas-vendas section.conteudo {
+    margin: 0; }
+  .page-minhas-vendas .view-vendas-usuario table th:nth-child(1),
+  .page-minhas-vendas .view-vendas-usuario table td:nth-child(1),
+  .page-minhas-vendas .view-vendas-usuario table th:nth-child(2),
+  .page-minhas-vendas .view-vendas-usuario table td:nth-child(2),
+  .page-minhas-vendas .view-vendas-usuario table th:last-child,
+  .page-minhas-vendas .view-vendas-usuario table td:last-child {
+    display: none; } }
+/*--- WEBFORM - PRE-CADASTRO DE FESTIVAIS -------------------------------------*/
+.page-node-23 section.conteudo header,
+.page-node-23 section.conteudo footer {
+  display: none; }
+.page-node-23 section.conteudo .container {
+  max-width: 750px; }
+
 /*--- RODAPE -------------------------------------------------------------------*/
 .cadastro-festival {
-  background: #19100e;
+  background: #f4645f;
+  background: -webkit-linear-gradient(left top, #ea4830, #FF6666);
+  background: -o-linear-gradient(bottom right, #ea4830, #FF6666);
+  background: -moz-linear-gradient(bottom right, #ea4830, #FF6666);
+  background: linear-gradient(to bottom right, #ea4830, #FF6666);
   padding: 20px 0;
   width: 100%;
   float: left;
@@ -2021,7 +2233,7 @@ body.page-legal-accept .conteudo {
     text-align: right;
     font-size: 21px; }
   .cadastro-festival a.btn {
-    color: #de5b47;
+    color: #f4645f;
     background: #fff;
     border-color: #ccc;
     margin-top: 7px;
@@ -2030,7 +2242,7 @@ body.page-legal-accept .conteudo {
 
 footer {
   padding: 50px 0;
-  background-color: #3b2b26;
+  background-color: #404040;
   color: #fff;
   width: 100%;
   float: left; }
@@ -2045,9 +2257,10 @@ footer {
     footer ul li.denunciar a {
       display: inline-block;
       padding: 7px 14px;
-      background: #de5b47; }
+      background: #f4645f; }
   footer img.logo {
-    max-width: 200px; }
+    max-width: 200px;
+    margin-top: 20px; }
   footer .social {
     color: #f5f5f5; }
   footer .social a {
@@ -2056,64 +2269,5 @@ footer {
     text-decoration: none; }
   footer p.copyright {
     margin: 15px 0 0; }
-
-@media (max-width: 767px) {
-  header {
-    text-align: center; }
-    header .logo {
-      position: relative;
-      margin: auto;
-      display: inline-block;
-      padding: 7px 20px;
-      float: none; }
-    header #block-dc-ajax-add-cart-ajax-shopping-cart {
-      position: absolute;
-      right: 15px;
-      top: 6px; }
-      header #block-dc-ajax-add-cart-ajax-shopping-cart h2 {
-        overflow: hidden;
-        width: 53px;
-        height: 43px;
-        text-indent: -5000em;
-        padding: 0; }
-
-  .second-header {
-    padding: 0; }
-    .second-header #busca {
-      width: 100%;
-      padding: 0;
-      margin: 0; }
-      .second-header #busca #edit-combine-wrapper {
-        width: 75%;
-        padding: 5% 0 3% 3%; }
-      .second-header #busca .views-submit-button {
-        width: 22%;
-        margin-top: 5%;
-        padding: 0; }
-        .second-header #busca .views-submit-button button {
-          padding: 0;
-          margin: 0;
-          width: 100%; }
-
-  .front .busca .busca-home {
-    bottom: 20%; }
-  .front .content-section-a,
-  .front .content-section-b {
-    text-align: center; }
-  .front .view-publicacoes-recentes .views-row {
-    width: 100%;
-    margin-top: 40px;
-    text-align: center;
-    padding: 5%; }
-  .front .view-publicacoes-recentes .foto {
-    max-width: 100px;
-    margin: auto;
-    margin-top: -30px; }
-  .front .view-festivais-proximos-home .views-row {
-    width: 100%; }
-  .front .mapa-festivais {
-    display: none; }
-  .front footer {
-    text-align: center; } }
 
 /*# sourceMappingURL=geral.css.map */

@@ -43,6 +43,9 @@ h6 {
 .card{
     background: #fff;
     padding: 25px;
+    /*border-radius: 2px;    
+    border: 1px solid $cinza-claro;*/
+    //box-shadow: 0 5px 5px #dcdcdc;
     border: 1px solid rgba(0,0,0,.08);
     border-radius: 4px;
 }
@@ -205,7 +208,8 @@ header{
         position: absolute;
         left: 0;
         top: 0; 
-        padding: 7px 20px;        
+        padding: 7px 20px;
+        //background: $salmao1;
 
         img{width: 150px;}
     }
@@ -213,31 +217,17 @@ header{
 
     #block-dc-ajax-add-cart-ajax-shopping-cart{
         position: absolute;
-        right: 195px;
+        right: 200px;
         top: 5px;
 
-         h2{           
-            font-size: 14px;
+         h2{
             color: #fff;
-            background: $salmao1 url(../img/cart-icon.png) 9px 9px no-repeat;
-            border-color: $salmao2;
-            display: inline-block;
-            margin: 22px 0 0 0;    
-            text-align: center;
-            vertical-align: middle;            
-            cursor: pointer;            
-            border-radius: 4px;            
-            padding: 12px 12px 12px 50px;
-            border-width: 0 1px 4px 1px;                   
-            border-bottom: 2px solid $salmao2;
-            transition: all .3s;
-            font-weight: 400;
-            letter-spacing: 0;
-            text-transform: uppercase;
+            background: $salmao1;
+            padding: 15px;
+            font-size: 14px;
         }
 
-        .ajax-shopping-cart-wrapper{   
-            width: 450px;     
+        .ajax-shopping-cart-wrapper{        
             opacity: 0;
             height: 0;
             overflow: hidden;
@@ -246,23 +236,17 @@ header{
             background: #fff;
             position: absolute;
             right: 0;
-            top: 60px;
+            top: 65px;
             text-align: left;
-            padding: 15px;
-            box-shadow: 0 0 12px #666;
+            border: 2px solid #ccc;
 
             h2{display: none;}
 
             a{color: #d1232e;}
 
-            th, td{
+            td{
                 border-bottom: 1px solid #ccc;
-                padding: 15px;
-            }
-
-            .ajax-shopping-cart-more-info{
-                font-weight: bold;
-                margin-top: 10px;
+                padding: 5px;
             }
         }
 
@@ -276,6 +260,35 @@ header{
           }
         }
     }
+
+    /* mensagem do carrinho */
+    .add-cart-message-wrapper{
+        .option-button.checkout{
+            color: #fff;
+            background-color: $salmao1;
+            border-color: $salmao2;            
+            border-radius: 4px;           
+            padding: 6px 24px;
+            border-width: 0 1px 4px 1px;        
+            text-transform: uppercase;
+            border-bottom: 2px solid $salmao2;
+            transition: all .3s;
+            font-weight: 400;
+        }
+        .option-button.continue{
+            color: $salmao1;
+            background-color: #fff;
+            border-color: $salmao1;            
+            border-radius: 4px;           
+            padding: 6px 24px;
+            //border-width: 0 1px 4px 1px;        
+            text-transform: uppercase;
+            //border-bottom: 2px solid $salmao2;
+            transition: all .3s;
+            font-weight: 400;
+        }
+    }
+
 
     .btn-group:hover .dropdown-menu{display: block;} 
 
@@ -300,6 +313,7 @@ header{
       -o-transition: .5s ease-in-out;
       transition: .5s ease-in-out;
     }
+
 
     /* Icon 2 */
     #nav-icon2 span {
@@ -389,7 +403,8 @@ header{
                 background: $salmao1;
                 color: #fff;
             }
-        }        
+        }
+        
 
     a, 
     a:active,
@@ -420,6 +435,8 @@ header{
     }
 
     .cadastrese{
+        //float: right;
+        //margin-top: 17px;
         position: absolute;
         top: 24px;
         right: 15px;
@@ -440,7 +457,9 @@ header{
                 text-decoration: none;
             }
         }
-        .cadastro{           
+        .cadastro{ 
+            //margin-top: 7px;  
+            //background: transparent;            
             padding: 12px;
             border-radius: 2px;
             color: #fff;
@@ -463,7 +482,11 @@ header{
         font-size: 12px;
     }
 
-    .view-menu-usuario{       
+    .view-menu-usuario{
+        /*float: right;        
+        width: 30%;
+        position: relative;
+        margin-top:5px;*/
         position: absolute;
         right: 40px;
         top: 22px;
@@ -479,9 +502,9 @@ header{
         }
         .foto{
             width: 45px;
-            float: right;
+            float: left;
             max-width: 45px;
-            margin: 5px 0;
+            margin: 5px 10px;
 
             img{max-width: 40px;}
         }
@@ -506,7 +529,12 @@ header{
             li.dropdown a:hover{
                 background: $marrom2;
                 color: #fff;
-            }            
+            }
+            /*li.dropdown.open > a,
+            li.dropdown.open > a:hover{
+                background: $salmao1;
+                color: #fff;
+            }*/
             ul.dropdown-menu li a:hover{background: $salmao1;}
         &:hover .menu{
             height: auto;
@@ -516,9 +544,10 @@ header{
 
     .dropdown-menu{transition: all .3s;}
 
+
     ul.menu > li{
         display: inline-block;
-        margin: auto;
+        margin: 0;
         text-transform: uppercase;
 
         a{
@@ -535,18 +564,22 @@ header{
     }
 
     ul.menu{
-        margin-right: 350px;
+        margin-right: 300px;
         float: right;
         margin-top: 0;
     }
+
+
 }
+
 
 .second-header{
     float: left;
     width: 100%;
-    padding: 0 0 5px 0;
+    padding: 0;
     text-align: center;
-    background: $salmao1;    
+    background: $salmao1;
+    //border-top: 1px solid #e3e3e3;
     position: relative;
     
     /* busca*/
@@ -565,8 +598,10 @@ header{
             height: 45px;
             color: #f1603e;
             font-size: 16px;
-            font-style: italic;            
-        }        
+            font-style: italic;
+            
+        }
+        //.form-control::-webkit-input-placeholder {color: $salmao1 !important;}
 
         #edit-field-data-value-wrapper,
         span.ou,
@@ -616,12 +651,16 @@ header{
 
     .busca{
         width: 100%;
-        height: 380px;        
-        float: left;        
+        height: 380px;
+        //padding: 45px 0 5px 0;
+        float: left;
+        //margin: 0 0 40px 0;
+        //background: $preto url(../img/bg9.jpg) center center no-repeat;
         background: $preto url(../img/1200.jpg) center center no-repeat;
         background-size: cover;
         border-bottom: 3px solid #ccc;
-        position: relative;        
+        position: relative;
+        //background: url(../img/bg-home.jpg);
 
         .busca-home{
             width: 70%;
@@ -641,10 +680,18 @@ header{
             line-height: 42px;
             font-size: 26px;
             letter-spacing: 1px;
-            margin-bottom: 5px;            
+            margin-bottom: 5px;
+            //margin-top: 100px;
 
             strong{font-weight: 800;}
         }
+
+        .views-exposed-widgets{            
+            /*margin: 20px 0;
+            padding: 15px 20px 20px 20px;
+            background: rgba(0,0,0,0.7)*/
+        }
+
 
         label{display: none;}
 
@@ -672,7 +719,8 @@ header{
             #edit-field-data-value-value,
             #edit-field-data-value-value-datepicker-popup-0,
             .form-type-date-popup{width: 100%;}
-        } 
+        }  
+
 
         #edit-sort-bef-combine-wrapper{display: none;}
 
@@ -694,14 +742,17 @@ header{
         font-size: 18px;
         font-weight: 400;
     }
+
     #excursao{
         float: left;
         width: 100%;
     }
+
     #publico{
         float: left;
         width: 100%;
     }
+
     .publicacoes-recentes{
         float: left;
         width: 100%;
@@ -715,6 +766,7 @@ header{
             padding: 2% 2% 0 2%;
             box-shadow: 3px 3px 3px #eee;
         }
+
 
          h2{
             text-align: center;
@@ -761,6 +813,7 @@ header{
                 padding: 14px 56px;
             }
         }
+
       }
 
       .mapa-festivais{
@@ -785,6 +838,11 @@ header{
         }
       }
 
+      //.cadastro-festival{margin-top: 0;}
+
+
+
+
     @media(max-width: 1285px){
         .busca #edit-combine-wrapper{width: 57%;}
     }
@@ -800,7 +858,9 @@ header{
                     padding: 0;
                     margin-bottom: 10px;
                 }
+
                 span.ou{display: none;}
+
             }
             section.conteudo{float: left; width: 100%;}
 
@@ -816,6 +876,10 @@ header{
     }
 
 }
+
+
+
+
 
 
 /* mapa */
@@ -888,7 +952,10 @@ header{
                     transition: all .3s;
                 }       
         }
+
 }
+
+//img{max-width: 100px;}
 
 .content-section-a {
     padding: 50px 0;
@@ -968,6 +1035,7 @@ header{
     }
 }
 
+
 /*--- TODOS OS FESTIVAIS ------------------------------------------------------------------*/
 
 .page-festivais{
@@ -983,7 +1051,10 @@ header{
         height: 240px;
         padding: 45px 0 5px 0;
         float: left;
-        margin: 0 0 40px 0;        
+        margin: 0 0 40px 0;
+        //background: $preto url(../img/bg_15.jpg) center center no-repeat;
+        //background: $preto url(../img/bg9.jpg) center center no-repeat;        
+        //background-size: cover;
         background: url(../img/bg-home.jpg);
         border-bottom: 3px solid #ccc;
         position: relative;
@@ -995,11 +1066,13 @@ header{
             padding: 15px 20px 20px 20px;
             background: rgba(0,0,0,0.7)
         }
+
         h2{
             color: #fff;
             text-align: center;
             margin-top: 0;
         }
+
         label{display: none;}
 
         .help-block{display: none;}
@@ -1149,6 +1222,7 @@ header{
 }
 
 
+
 /*--- PAGINA DE UM FESTIVAL -------------------------------------------------------------*/
 
 .node-type-festival{
@@ -1180,7 +1254,8 @@ header{
         text-align: center;
         background: #fff;
         border: none;
-        float: left;          
+        float: left;  
+        //border-bottom: 2px solid $salmao1;        
 
        h1{
             font-weight: 600;
@@ -1194,7 +1269,9 @@ header{
             margin: 25px 0 -55px 0;
             display: none;
         }
+
     }
+
 
     .aviso{
         width: 100%;
@@ -1204,6 +1281,7 @@ header{
         float: left;
         margin-top: 50px;
     }
+
     .view-festival-sobre{
         float: left;
         width: 100%;
@@ -1211,20 +1289,6 @@ header{
         margin-bottom: 25px;
 
         h2{display: none;}
-
-        span.date-display-single {
-            padding: 5px 0;
-            display: block;
-            width: 100%;
-            border-bottom: 1px solid #eee;
-            border-top: 1px solid #eee;
-            margin-bottom: 10px;
-        }
-
-        .date-display-remaining{
-            font-weight: bold;
-            margin-bottom: 40px;
-        }
 
         p{
             line-height: 24px;
@@ -1383,6 +1447,7 @@ header{
                 float: right;
                 width: 48%;   
             }
+
         }
 
         /* venda de ingressos */
@@ -1454,12 +1519,14 @@ header{
             }
         }   
 
-        .tipo{            
+        .tipo{
+            //background: $salmao1;
             border: 2px solid $salmao1;
             color: $salmao1;
             width: auto;
             display: inline-block;
-            padding: 5px 10px;            
+            padding: 5px 10px;
+            //color: #fff;
             font-weight: bold;
         }    
     }
@@ -1576,12 +1643,14 @@ header{
     
   }
 
+
   .publicidade{
     img{
         width: 100%;
         max-width: 100%;
     }
   }
+
 
     .publicacoes-recentes{
         float: left;
@@ -1633,7 +1702,9 @@ header{
 
         .info{padding: 7px 15px 15px 15px;}
     }
+
   }
+
 }
 
 @media(max-width:1200px){
@@ -1759,6 +1830,27 @@ header{
         .getlocations_fields_province_wrapper{margin: 20px 0 50px 0;}
     }
 }
+
+/*--- VISUALIZAR UM CONTEUDO (COMPRA/VENDA DE INGRESSO, OFERECE/PROCURA CARONA, EXCURSAO) --------------*/
+
+/*.node-type-procura-carona{
+    header{margin-bottom: 50px;}
+    
+    .principal .container{max-width: 700px !important;}
+
+    section.conteudo{
+        header,
+        footer,
+        #edit-comment-body-und-0-format--3,
+        #edit-notify-type--2,
+        #edit-notify-type{display: none;}
+
+        #comments{
+
+        }
+    } 
+}*/
+
 
 /*--- EDITAR UM CONTEUDO DE COMPRA/VENDA DE INGRESSOS ou EXCURSAO ---------------------------------------*/
 
@@ -1906,7 +1998,6 @@ header{
     .conteudo{
         float: left;
         width: 100%;
-        padding-bottom: 50px;
 
         h1{
             font-size: 42px;
@@ -1924,9 +2015,34 @@ header{
                 font-weight: 700;
                 letter-spacing: -1px;
             }
-            .views-field-commerce-price{
-                font-weight: bold;
-            }            
+            .preco-de{
+                display: inline-block;
+                width: 100%;
+            }
+            .preco-de{
+                display: inline-block;
+                width: 100%;   
+            }
+            .views-field-add-to-cart-form form > div{
+                text-align: center;
+            }
+            .form-item-quantity{
+                width: 90%;
+                padding-left: 10%;
+                label{
+                    display: inline-block;
+                    float: left;
+                    margin-right: 15px;
+                }
+                input{
+                    width: 70px;
+                    float: left;
+                }
+            }
+            button{
+                display: inline-block;
+                margin: 15px auto;
+            }
         }
     }
 }
@@ -1948,15 +2064,6 @@ header{
                 display: inline-block;                
             }
         }
-        h1{
-            font-weight: 600;
-            margin-bottom: 40px;
-        }
-        .pane-node-product-commerce-price{
-            font-size: 18px;
-            margin-bottom: 50px;
-        }
-
         .views-field-commerce-price{
             span, div{text-decoration: line-through;}
             font-size: 16px;
@@ -1970,8 +2077,6 @@ header{
         }
         .form-item-quantity{
             width: 185px;
-            float: left;
-
             label{display: inline-block;}
             input{
                 display: inline-block;
@@ -1984,49 +2089,7 @@ header{
             margin-bottom: 75px;
         }
     }
-
-    /* mensagem do carrinho */
-    .add-cart-message-wrapper{
-        border: none;
-        .added-product-message{
-            padding: 10px;
-            background: #f5f5f5;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-        .new-item-details{
-            width: 250px;
-            margin-top: 0;
-        }
-        .product-name{font-weight: bold;}
-        .option-button.checkout{
-            color: #fff;
-            background-color: $salmao1;
-            border-color: $salmao2;            
-            border-radius: 4px;           
-            padding: 12px 24px;
-            border-width: 0 1px 4px 1px;        
-            text-transform: uppercase;
-            border-bottom: 2px solid $salmao2;
-            transition: all .3s;
-            font-weight: 400;
-
-            a{color: #fff;}
-        }
-        .option-button.continue{
-            color: $salmao1;
-            background-color: #fff;
-            border-color: $salmao1;            
-            border-radius: 4px;           
-            padding: 6px 24px;
-            border: 2px solid $salmao1;
-            text-transform: uppercase;            
-            transition: all .3s;
-            font-weight: 400;
-        }
-    }
 }
-
 
 /*--- PAGINA DO CARRINHO ------------------------------------------------------------*/
 .page-cart{
@@ -2255,12 +2318,17 @@ body.page-legal-accept{
     #edit-profile-main .panel-body{padding: 0;}
     #edit-profile-main .field-name-field-termos-e-condicoes{display: block !important;}
 
+    //.cadastro-festival .container{max-width: 1200px !important;}
+
+    //footer .container{max-width: 1200px !important;}
 }
 
 
 /*--- LOGIN / CADASTRO -----------------------------------------------------------*/
 
 .page-user.not-logged-in{
+
+    //.second-header{margin-bottom: 50px;}
 
     #principal{
         float: left;
@@ -2289,7 +2357,9 @@ body.page-legal-accept{
             padding: 0;
         }
         .panel-body{border: none; padding: 0;}
-    }  
+    }
+
+  
 
     #edit-profile-main-field-sexo-und{
         .form-item:nth-child(1){display: none;}
@@ -2314,6 +2384,7 @@ body.page-legal-accept{
         }
     }
 
+
     fieldset#edit-locale,
     fieldset#edit-timezone{display: none;}
 
@@ -2330,7 +2401,8 @@ body.page-legal-accept{
     padding: 20px 0;
     width: 100%;
     float: left;
-    color: #fff;
+    color: #fff;  
+    //margin-top: 50px; 
 
     h3{
         font-weight: 300;
@@ -2357,6 +2429,7 @@ footer {
     float: left;
 
     a{color: #fff !important;}
+
 
     ul{
         list-style-type: none;
@@ -2387,34 +2460,23 @@ footer {
     }
 }
 
-/*-------------------------------------------------------------------------------------------*/
 
+
+@media(max-width: 768px){
+    .cadastro-festival h3{text-align: center;}
+    footer{
+        text-align: center;
+    }
+}
 
 @media(max-width: 468px){
-    /*.cadastro-festival{
+    .cadastro-festival{
         h3{font-size: 16px;}
         a.btn{width: 100%;}
     } 
 
     footer{
         .logo{display: none;}
-    }*/
-
-}
-
-@media(max-width: 767px){
-
-    /****************************/
-    #admin-menu{display: none;}
-    /****************************/
-
-    /*.cadastro-festival h3{text-align: center;}
-    footer{
-        text-align: center;
-    }*/
-}
-
-
-@media(min-width: 768px){
+    }
 
 }

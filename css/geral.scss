@@ -2,14 +2,23 @@
 $amarelo1: #ffb536;
 $amarelo2: #e69a18;
 //$salmao1: #f1603e;
-$salmao1: #de5b47;
-$salmao2: #e00007;
+//$salmao1: #de5b47;
+$salmao1: #f4645f;
+$salmao2: #ea4830;
 $salmao3: #f18469;
-$marrom: #3b2b26;
+//$marrom: #3b2b26;
+$marrom: #404040;
 $marrom2: #19100e;
 $preto: #222;
 $cinza-claro: #efedee;
 
+@mixin gradiente-1{
+    background: -webkit-linear-gradient(left top, #ea4830, #FF6666);
+    background: -o-linear-gradient(bottom right, #ea4830, #FF6666);
+    background: -moz-linear-gradient(bottom right, #ea4830, #FF6666);
+    background: linear-gradient(to bottom right, #ea4830, #FF6666);
+}
+    
 
 body,
 html {
@@ -18,7 +27,7 @@ html {
 }
 
 body{
-    background: #f5f5f5;
+    background: #f9f7f4;
     color: $marrom;
     font-family: 'Raleway', sans-serif;
 }
@@ -42,12 +51,28 @@ h6 {
     font-weight: 400;
 }
 
+h1.page-title{
+    margin: 40px 0 60px 0 !important;
+    text-align: center;
+
+    &:after{
+        content: '';
+        display: block;
+        margin: auto;
+        width: 7%;
+        margin-top: 20px;
+        height: 5px;
+        background: $salmao1;
+    }
+}
+
 .card{
     background: #fff;
     padding: 25px;
     border: 1px solid rgba(0,0,0,.08);
     border-radius: 4px;
 }
+
 
 .abas{ 
     padding: 15px 25px 10px 25px;
@@ -76,7 +101,7 @@ h6 {
 section.conteudo{
     float: left;
     width: 100%;
-    margin: 75px 0;
+    margin: 50px 0;
 }
 
 
@@ -164,6 +189,7 @@ form input[type="submit"]{
     border-bottom: 2px solid $salmao2;
     transition: all .3s;
     font-weight: 400;
+     @include gradiente-1;
 
     span{margin-right: 7px;}
 }
@@ -194,6 +220,7 @@ form input[type="submit"]:hover{
 
 header{
     background: $salmao1;
+    @include gradiente-1;
     height: 91px;
     text-align: center;
     position: relative;
@@ -239,27 +266,26 @@ header{
 
     .logo{
         margin: auto;
-        width: 130px;
+        width: 150px;
         height: 91px;
-        float: left;
-        padding: 7px 0;
-        margin-left: 35px;
-        margin-top: 4px;      
+        position: absolute;
+        left: 0;
+        top: 10px;
 
-        img{width: 130px;}
+        img{width: 150px;}
     }
 
     /* menu hamburguer */
     .c-hamburger{
       display: block;
       position: absolute;
-      top: 31px;
-      left: 0;
+      top: 31px;      
+      right: 0;
       overflow: hidden;
       margin: 0;
-      padding: 0;
+      padding: 5px;
       width: 35px;
-      height: 30px;
+      height: 35px;      
       font-size: 0;
       text-indent: -9999px;
       appearance: none;
@@ -274,8 +300,13 @@ header{
     .c-hamburger:focus,
     .c-hamburger:hover,
     .c-hamburger:active{
-      outline: none;
-      background-color: $salmao1 !important;
+      outline: none;      
+      height: 50px;
+      background: $salmao1 !important;
+
+      span,
+      span::before,
+      span::after{background-color: $preto !important;}
     }
 
     .c-hamburger span{
@@ -284,12 +315,13 @@ header{
         top: 13px;
         left: 0;
         right: 0;
-        height: 4px;
+        height: 3px;
         background: #fff;
         border-radius: 10px;
-        margin-right: 0;
+        margin-right: 5px;
+        margin-left: 5px;
 
-        &:hover{background-color: #fff;}
+        //&:hover{background-color: #fff;}
       }
 
       .c-hamburger span::before,
@@ -298,24 +330,24 @@ header{
         display: block;
         left: 0;
         width: 100%;
-        height: 4px;
+        height: 3px;
         background-color: #fff;
         content: "";
         border-radius: 10px;
 
-        &:hover{background-color: #fff;}
+        //&:hover{background-color: #fff;}
       }
 
-      .c-hamburger span::before{top: -10px;}
+      .c-hamburger span::before{top: -8px;}
 
-      .c-hamburger span::after{bottom: -10px;}
+      .c-hamburger span::after{bottom: -8px;}
 
-      .c-hamburger--htx span{transition: background 0s 0.1s;}
+      //.c-hamburger--htx span{transition: background 0s 0.1s;}
 
       .c-hamburger--htx span::before,
       .c-hamburger--htx span::after {
-        transition-duration: 0.1s, 0.1s;
-        transition-delay: 0.1s, 0s;
+        /*transition-duration: 0.1s, 0.1s;
+        transition-delay: 0.1s, 0s;*/
       }
 
       .c-hamburger--htx span::before{transition-property: top, transform;}
@@ -327,12 +359,11 @@ header{
         .c-hamburger--htx.is-active{
             overflow: visible;
             padding: 15px;
-            transition: 0.3s all;
-            //background-color: $salmao3 !important;
+            transition: 0.3s all;           
 
             span,
             span::after,
-            span::before{background-color: $salmao3}
+            span::before{background-color: #fff}
         } 
 
     /* menu conteudo */
@@ -346,13 +377,13 @@ header{
       width: 205px;
       margin-left: 0;
       background: #fff;
-      //box-shadow: 0 0 10px #999;
       position: absolute;
-      left: 0;
-      top: 21px;
+      right: 0;
+      top: 30px;
       border-radius: 4px;
       font-size: 14px;
       text-indent: 0;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 
       li{
         list-style-image: none;
@@ -361,14 +392,21 @@ header{
 
         a{
           color: $salmao1;
-          text-transform: uppercase;
+          text-transform: none;
           display: inline-block;          
           width: 100%;
           padding: 10px 20px;
 
-          &:hover{color: #fff !important;}
+          &:hover{color: $salmao1 !important;}
         }
-      }        
+      } 
+
+
+      li.minha-conta{
+        padding-top: 10px;
+        margin-top: 10px;
+        border-top: 1px solid #d2d2d2;
+      }       
     }
 
     .menu.is-active{
@@ -397,7 +435,7 @@ header{
             text-indent: -5000em;
             width: 50px;
 
-            &:hover{background-color: $salmao3;}
+            &:hover{background-color: $salmao2;}
         }
 
         .cart-empty-block{
@@ -421,10 +459,12 @@ header{
             background: #fff;
             position: absolute;
             right: 0;
-            top: 60px;
+            top: 68px;
             text-align: left;
             padding: 0;
-            box-shadow: 0 0 12px #666;
+            border-radius: 4px;
+            font-size: 14px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 
             h2{display: none;}
 
@@ -438,6 +478,26 @@ header{
             .ajax-shopping-cart-more-info{
                 font-weight: bold;
                 margin-top: 10px;
+            }
+
+            .view-footer{
+                .links.list-inline{
+                    width: 100%;
+                    float: right;
+                    margin: 15px 0 0 0;
+                    padding: 0;
+                    text-align: right;
+                }            
+                a{
+                    display: inline-block;
+                    color: #fff;
+                    background: $salmao1;
+                    border-radius: 3px;
+                    padding: 5px 10px;
+                    margin: 0 0 0 5px;
+
+                    &:hover{background: $preto;}
+                }
             }
         }
 
@@ -460,7 +520,7 @@ header{
     
     .cadastrese{
         float: right;
-        margin: 23px 0 0 5px;
+        margin: 23px 35px 0 5px;
         font-size: 12px;
         text-transform: uppercase;
 
@@ -481,12 +541,11 @@ header{
         }
         .cadastro{           
             padding: 12px;
-            border-radius: 2px;
+            border-radius: 5px;
             color: #fff;
             margin-top: 0;
-            background: #fff;
-            color: $salmao1;
-            border: none;
+            color: #fff;
+            border: 1px solid #fff;
 
             &:hover{
                 background: $salmao1;
@@ -496,84 +555,71 @@ header{
         }
     }
 
-    .cadastro-festival{
+    /*.cadastro-festival{
         float: right;
         display: block;
         width: auto;
         margin: 10px 0 0 15px;
         padding: 5px 10px;
         font-size: 12px;
-    }
+    }*/
 
-    .view-menu-usuario{       
+    .view-menu-usuario{    
         float: right;
-        margin: 23px 0 0 25px;
+        margin: 20px 40px 0 0;
+        overflow: hidden;
+        position:relative;
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
 
         a{
             font-weight: normal; 
             color: #fff;
         }
-        .nome{
+        .views-field-field-nome{
             float: left;
-            width: 75%;
-            padding: 7px 14px 0 0;
+            padding: 0;
+            margin: 0;
             cursor: pointer;
-            text-align: left;
+            position: absolute;
+            right: 50px;
+            top: 15px;
+
+            .editar-perfil{display: none;}
+
         }
-        .foto{
+        .views-field-field-foto{
             width: 45px;
             float: right;
             max-width: 45px;
             margin: 5px 0;
 
             img{max-width: 40px;}
-        }
-        .dropdown-menu{
-            display: block;
-            height: 0;
-            overflow: hidden;
-            opacity: 0;
-            padding: 0;
-            transition: all .3s;
-            border-radius: 4px;
-        }
-        li.dropdown:hover{
-            background: $salmao3;
-            .dropdown-menu{
-                opacity: 1;
-                height: auto;
+        }       
+        
+    }
 
-                a{
-                    color: $salmao1;
-                    padding: 10px;
+    .menu-usuario{
+        a:hover{color: $salmao1;}
+    }
 
-                    &:hover{color: #fff;}
-                }
-            }
-        }
-            li.dropdown > a{
-                padding: 15px 10px;
-                color: #fff;
-            }
-            li.dropdown a:hover{
-                background: $marrom2;
-                color: #fff;
-            }            
-            ul.dropdown-menu li a:hover{background: $salmao1;}
-        &:hover .menu{
-            height: auto;
-            opacity: 1;
+    .menu-usuario:hover{
+        overflow: visible;
+        ul.menu{
+            height: auto !important;
+            opacity: 1 !important;
         }
     }
 
     /* busca*/
     #busca{ 
-        width: 55%;
+        width: 50%;
         margin: 5px auto;
         position: absolute;
-        left: 55%;
+        left: 50%;
         top: 10px;
-        margin-left: -30%;
+        margin-left: -25%;
 
 
         label{display: none;}         
@@ -585,13 +631,15 @@ header{
         }
 
         #edit-combine{
-            height: 45px;
-            //color: #f1603e;
-            font-size: 16px;
+            height: 45px;            
+            font-size: 15px;
             font-style: italic; 
             font-weight: normal;
             border-top-right-radius: 0;
-            border-bottom-right-radius: 0;           
+            border-bottom-right-radius: 0;     
+            border: none;  
+
+            padding: 10px 0 0 10px 8px;    
         }        
 
         #edit-field-data-value-wrapper,
@@ -605,11 +653,11 @@ header{
             button{
                 margin-top: 0;
                 height: 45px;
-                padding: 8px 21px;
+                padding: 8px 16px;
                 float: left;
-                color: #fff;
-                background: $marrom; 
-                border-bottom-color: $marrom2;
+                color: $salmao1;
+                background: #fff; 
+                border-bottom-color: #fff;
                 border-top-left-radius: 0;
                 border-bottom-left-radius: 0;   
             }
@@ -629,7 +677,7 @@ header{
     
 }
 
-@media(max-width:767px){
+/*@media(max-width:767px){
     .view-menu-usuario{display: none;}
 }
 
@@ -640,7 +688,7 @@ header{
         .cadastro-festival,
         .cadastrese{display: none;}
     } 
-}
+}*/
 
 /*--- HOME -------------------------------------------------------------*/
 
@@ -1249,13 +1297,14 @@ header{
 
         h2{display: none;}
 
-        span.date-display-single {
-            padding: 5px 0;
+        span.date-display-single,
+        .date-display-range {
+            padding: 10px 0;
             display: block;
             width: 100%;
             border-bottom: 1px solid #eee;
             border-top: 1px solid #eee;
-            margin-bottom: 10px;
+            margin: 20px 0;
         }
 
         .date-display-remaining{
@@ -1773,7 +1822,15 @@ header{
 /*--- EDITAR UM FESTIVAL ----------------------------------------------------------------*/
 
 .page-node-edit.node-type-festival{
-    //.nav-tabs{display: none;}
+    
+    .shortcuts{
+        display: none;
+    }
+
+    .region-content{
+        float: left;
+        width: 100%;
+    }
 
     #block-system-main{
        margin: 50px auto 0 auto;
@@ -1972,9 +2029,10 @@ header{
 /*--- INGRESSO INDIVIDUAL ----------------------------------------------------------*/
 .node-type-ingresso,
 .node-type-produto-externo{
-    .conteudo{
+    section.conteudo{
         float: left;
         width: 100%;
+        margin: 25px 0 !important;
 
         .panel-col-first{padding-right: 2%;}
         .panel-col-last{padding-left: 2%;}
@@ -2016,6 +2074,8 @@ header{
                 display: inline-block;
                 margin-bottom: 20px;   
                 font-size: 13px;
+                padding-left: 60px;
+                background: transparent url(../img/icon_ticket.png) left center no-repeat;
             }
         }
         .field-name-field-link{
@@ -2109,6 +2169,8 @@ header{
             margin: 50px 0;
             font-weight: 600;
         }
+
+        .cart-empty-page{text-align: center;}
     }
 }
 
@@ -2124,8 +2186,28 @@ header{
         width: 100%;
         padding: 25px 0 50px 0;
     }
+    .account_form{
+        .cart_contents{display: none;}
+    }
+    #edit-account-form{
+        #edit-account-form-cart-contents{display: none;}
+    }
     #commerce-shipping-service-ajax-wrapper{ margin-bottom: 20px;}
     .form-item.form-item-customer-profile-shipping-commerce-customer-address-und-0-country{display: none;}
+
+    .commerce_payment{
+        #edit-commerce-payment-payment-method{
+            float: left;
+        }
+        #payment-details{
+            float: right;
+            width: 70%;
+            margin: 0 0 40px 0;
+
+            h3{margin-top: 5px;}
+        }
+    }
+    
 
     .checkout-buttons{
         span.button-operator,
@@ -2133,6 +2215,7 @@ header{
     }
 
 }
+
 
 .page-checkout-payment{
     .conteudo{
@@ -2169,12 +2252,20 @@ header{
 .page-user.logged-in{
 
     .header{    
-        min-height: 350px;
+        min-height: 250px;
         background-position: top center;
         background-repeat: repeat-x;
         background-size: auto 100%;
         background-color: #999;
     }
+
+    #principal{
+        width: 100%;
+        float: left;
+        margin: 50px 0;
+    }
+
+    .container{ padding: 0;}
 
     .nav-tabs{display: none;}
 
@@ -2184,7 +2275,9 @@ header{
         margin: -50px 0 25px 0; 
         padding-bottom: 75px;
         text-align: center;
-        position: relative;        
+        position: relative; 
+        border-radius: 0;
+        border-top: none;       
 
         img.img-circle{
             max-width: 200px;
@@ -2230,15 +2323,37 @@ header{
 
 /*--- EDITAR USUARIO ---------------------------------------------------------------*/
 
-.page-user-edit{
+.page-user-edit,
+.page-user-me-edit{
 
-    .nav-tabs{display: block !important;}
+    .shortcuts{
+        display: block;
+        float: left;
+        width: 100%;        
+    }
+
+    #principal{
+        float: left;
+        width: 100%;        
+        margin: 50px 0;
+    }
 
     .conteudo{
-        margin: 50px auto 0 auto;
-        max-width: 700px;
+        margin: 0 auto;        
         padding: 25px;
         background: #fff;
+        //float: left;
+        width: 100%;
+        max-width: 700px;
+
+        #block-system-main{
+            background: #fff;
+            padding: 25px;
+            border: 1px solid rgba(0,0,0,.08);
+            border-radius: 4px;
+            max-width: 1170px;
+            margin: auto;
+        }
 
         .form-wrapper.form-group{
             padding-bottom: 10px;            
@@ -2419,14 +2534,162 @@ body.page-legal-accept{
 /*--- PAGINA DE UM INGRESSO / TICKET --------------------------------------------*/
 
 .ticket-individual{
+    .view-ticket-individual-voucher{
 
+        .ticket-print{
+            position: relative;
+            border: 1px solid #e3e3e3;
+            width: 100%;
+            float: left;
+            padding: 25px;
+            margin-bottom: 50px;
+
+            .item{
+                width: 100%;
+                float: left;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+                span.item-label{
+                    float: left;
+                    display: inline-block;
+                    font-weight: bold;
+                    margin-right: 10px;
+                }
+            }
+            .titulo{
+                font-size: 32px;
+                margin: 30px 0;
+                text-transform: none;
+
+                .views-label{display: none;}
+            }
+
+        }
+        .ticket-extras{
+
+        }
+
+        h4{font-weight: bold;}       
+
+        .instrucoes{
+            /*padding: 5%;
+            background-color: #f5f5f5;
+            border: 1px solid #eee;*/
+        }
+    }
+     .imprimir{
+        width: 100%;
+        float: left;            
+        text-align: center;
+        margin: 50px 0;
+        padding: 20px 0;
+
+        a{
+            width: 30%;
+            padding: 2%;
+        }
+    }
 }
 
+@media print{
+    .ticket-individual{
+        header,
+        h1,
+        .cadastro-festival,
+        .imprimir,
+        footer{display: none;}
+
+        section.conteudo{margin: 0;}
+
+        .card{border: none;}
+
+        .ticket-extras{
+            font-size: 11px;
+        }
+    }
+}
+
+
+/*--- PEDIDOS DE UM USUARIO ---------------------------------------------------*/
+.page-meus-pedidos{
+    .conteudo{
+        h1{
+            text-align: center;
+            margin: 0 0 25px 0;
+        }
+
+        .view-pedidos-usuario{
+            .view-empty{text-align: center;}
+        }
+    }
+}
+
+/*--- VENDAS POR USUARIO ------------------------------------------------------*/
+
+.page-minhas-vendas{
+
+    #edit-title-wrapper{
+        margin-bottom: 50px;
+        label {display: block;}
+    }
+    .view-empty{text-align: center;}
+
+    .imprimir{
+        width: 100%;
+        float: left;            
+        text-align: center;
+        margin: 25px 0;
+
+        a{
+            /*width: 30%;
+            padding: 2%;*/
+        }
+    }
+}
+
+
+   
+@media print{
+    .page-minhas-vendas{
+        header,
+        h1,
+        .cadastro-festival,
+        .imprimir,
+        .view-filters,
+        footer{display: none;}
+
+        section.conteudo{margin: 0;}
+
+        .view-vendas-usuario{
+            table{
+                th:nth-child(1),
+                td:nth-child(1),
+                th:nth-child(2),
+                td:nth-child(2),
+                th:last-child,
+                td:last-child{display: none;}
+            }
+        }
+    }
+}
+
+/*--- WEBFORM - PRE-CADASTRO DE FESTIVAIS -------------------------------------*/
+.page-node-23{
+    section.conteudo{
+        
+        header,
+        footer{display:none;}
+
+        .container{max-width: 750px;}
+
+    }
+}
 
 /*--- RODAPE -------------------------------------------------------------------*/
 
      .cadastro-festival{
-        background: $marrom2;
+        background: $salmao1;
+        @include gradiente-1;
         padding: 20px 0;
         width: 100%;
         float: left;
@@ -2473,7 +2736,10 @@ body.page-legal-accept{
             }
         }
 
-        img.logo{max-width: 200px;}
+        img.logo{
+            max-width: 200px;
+            margin-top: 20px;
+        }
 
 
         .social{color: #f5f5f5;}
@@ -2489,92 +2755,3 @@ body.page-legal-accept{
     }
 
 
-
-// } /* final media querie */
-
-
-@media(max-width:767px){
-    
-    header{
-        text-align: center;
-
-        .logo{
-            position: relative;
-            margin: auto;            
-            display: inline-block;
-            padding: 7px 20px;
-            float: none;
-        }
-        #block-dc-ajax-add-cart-ajax-shopping-cart{
-            position: absolute;
-            right: 15px;
-            top: 6px; 
-
-            h2{
-                overflow: hidden;
-                width: 53px;
-                height: 43px;
-                text-indent: -5000em;
-                padding: 0;               
-            }
-        }
-    }
-
-
-    .second-header{
-        padding: 0;
-
-        #busca {
-            width: 100%;
-            padding: 0;
-            margin: 0;
-
-            #edit-combine-wrapper{
-                width: 75%;
-                padding: 5% 0 3% 3%;
-            }
-            .views-submit-button {
-                width: 22%;
-                margin-top: 5%;
-                padding: 0;
-                button{
-                    padding: 0;
-                    margin: 0;
-                    width: 100%;
-                }
-            }
-        }
-        
-    }
-
-    .front{
-
-        .busca .busca-home {bottom: 20%;}
-
-        .content-section-a,
-        .content-section-b{text-align: center;}
-
-        .view-publicacoes-recentes{
-            .views-row{
-                width: 100%;
-                margin-top: 40px;
-                text-align: center;
-                padding: 5%;
-            }
-            .foto{
-                max-width: 100px;
-                margin: auto;
-                margin-top: -30px;
-            }
-        }
-
-        .view-festivais-proximos-home .views-row{width: 100%;}
-
-        .mapa-festivais{display:none;}
-
-        footer{text-align: center;}
-    }
-
-   
-
-}
