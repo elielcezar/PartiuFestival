@@ -3,6 +3,8 @@
 
 <div id="principal">
 
+  <div class="container">
+
   <div class="conteudo">
 
   <div class="shortcuts">
@@ -13,6 +15,7 @@
   </div> 
 
 		<?php print render($page['content']); ?>   
+</div>
 </div>
 </div>
 

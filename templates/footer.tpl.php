@@ -32,7 +32,7 @@
 
                 <div class="col-sm-3">  
 
-                    <img src="<?php print base_path() . path_to_theme() ?>/img/logo-rodape.png" class="logo img-responsive" />
+                    <img src="<?php print base_path() . path_to_theme() ?>/img/logo-2017.png" class="logo img-responsive" />
 
                 </div>
 
@@ -254,6 +254,10 @@
 
 jQuery(function( $ ){
 
+    /* menu do usuario */
+    $('#block-system-user-menu').appendTo('.menu-usuario');
+
+    /* menu hamburguer*/
     $('.c-hamburger').mouseenter(function(){
         $(this).addClass('is-active');
         $('header ul.menu').addClass('is-active');
@@ -334,19 +338,26 @@ jQuery(function( $ ){
 
 jQuery(document).ready(function ($) {
 
-    $('#edit-combine').attr('placeholder','Pesquise pelo nome do Festival, pela cidade ou estado');
+    $('#edit-combine').attr('placeholder','Pesquise pelo nome do Festival, Cidade ou Estado e...');
     $('#edit-field-data-value-value-datepicker-popup-0').attr('placeholder','Pesquise a partir de uma data'); 
     $('#edit-combine-autocomplete-aria-live').click(function(){
         $('header #edit-combine-wrapper .form-item-combine').submit();
     });
 
     /* adiciona link no icone do carrinho no topo */
-    $('header #block-commerce-cart-cart h2').wrap('<a href="http://partiufestival.com/ingressos"></a>');
+    $('header #block-commerce-cart-cart h2').wrap('<a href="http://partiufestival.com/cart"></a>');
 
     /* aviso na pagina de um ingresso */
-    $('.node-type-ingresso #edit-line-item-fields--2').prepend('<span class="aviso">Informe os dados <strong>DA PESSOA QUE IRÁ UTILIZAR O INGRESSO</strong>. Insira um por vez clique em comprar. Repita o processo para cada pessoa que você estiver comprando.</span>');
+    $('.node-type-ingresso #edit-line-item-fields--2').prepend('<span class="aviso">No Partiu Festival os ingressos são pessoais e intransferíveis. Por isso, pedimos que você informe abaixo os dados <strong>DA PESSOA QUE IRÁ UTILIZAR O INGRESSO</strong>. Insira um por vez clique em comprar. Repita o processo para cada pessoa que você estiver comprando.</span>');
 
-
+    /* ajustes na lista de pedidos do usuario */
+    var $Divs = $('.page-meus-pedidos .view-pedidos-usuario tr td:nth-child(1)');
+    $Divs.each(function(i) {
+      if ($(this).find("img").length == 0) {
+           $(this).html('<img src="http://partiufestival.com/sites/all/themes/partiucadastro/img/ingresso-thumb.jpg" /  >');
+      } 
+    });
 });
 
 </script>
+

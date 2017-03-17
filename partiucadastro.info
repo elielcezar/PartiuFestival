@@ -8,6 +8,7 @@ core = 7.x
 base theme = bootstrap
 
 stylesheets[all][] = css/geral.css
+stylesheets[all][] = css/max-767.css
 
 
 regions[header] = Header
