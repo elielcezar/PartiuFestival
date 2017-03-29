@@ -1027,7 +1027,8 @@ header {
       .node-type-festival .header .capa img {
         display: none; }
   .node-type-festival .basic-info {
-    padding: 0;
+    display: none;
+    padding: 25px 0;
     margin: 0 0 50px 0;
     width: 100%;
     text-align: center;
@@ -1044,17 +1045,21 @@ header {
     .node-type-festival .basic-info .ingressos {
       margin: 25px 0 -55px 0;
       display: none; }
+  .node-type-festival .acoes {
+    margin-top: 50px; }
+    .node-type-festival .acoes h1 {
+      text-align: center;
+      margin: 40px 0 60px 0; }
   .node-type-festival .aviso {
     width: 100%;
     border: 2px solid #f4645f;
     text-align: center;
     padding: 50px;
     float: left;
-    margin-top: 50px; }
+    margin-top: 20px; }
   .node-type-festival .view-festival-sobre {
     float: left;
     width: 100%;
-    padding: 25px;
     margin-bottom: 25px; }
     .node-type-festival .view-festival-sobre h2 {
       display: none; }
@@ -1065,7 +1070,7 @@ header {
       width: 100%;
       border-bottom: 1px solid #eee;
       border-top: 1px solid #eee;
-      margin: 20px 0; }
+      margin: 0 0 20px 0; }
     .node-type-festival .view-festival-sobre .date-display-remaining {
       font-weight: bold;
       margin-bottom: 40px; }
@@ -1081,7 +1086,7 @@ header {
       border: 2px solid #f4645f;
       color: #f4645f; }
   .node-type-festival h2 {
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: -1px;
     font-size: 28px;
     text-align: center; }
@@ -1094,6 +1099,8 @@ header {
   .node-type-festival .container-abas {
     float: left;
     width: 100%; }
+    .node-type-festival .container-abas h2 {
+      font-size: 16px; }
   .node-type-festival .abas {
     padding: 0;
     margin: 0;
@@ -1101,41 +1108,49 @@ header {
     float: left;
     width: 100%; }
     .node-type-festival .abas .nav-tabs {
-      margin: 0; }
+      margin: 0;
+      /*li.sobre a{background-image: url(../img/icon_infofestival.png);}
+      li.excursoes a{background-image: url(../img/icon_excursoes.png);}
+      li.compra-ingresso a{background-image: url(../img/icon_compraingresso.png); display: none;}
+      li.venda-ingresso a{background-image: url(../img/icon_vendaingresso.png);}
+      li.oferece-carona a{background-image: url(../img/icon_oferecendocarona.png);}
+      li.procura-carona a{background-image: url(../img/icon_procurandocarona.png);}*/ }
       .node-type-festival .abas .nav-tabs li {
         margin: 0;
         padding: 0;
-        width: 20%; }
+        width: 100%; }
         .node-type-festival .abas .nav-tabs li a {
-          padding: 60px 5px 25px 5px;
+          /*padding: 60px 5px 25px 5px;
           background-position: 50% 16px;
           background-repeat: no-repeat;
           border-radius: 0;
           margin-right: 0;
-          border: none !important;
-          font-weight: 600;
-          text-align: center;
-          transition: all .3s; }
+          border: none !important;*/
+          font-weight: 400;
+          text-align: left;
+          transition: all .3s;
+          border-bottom: 2px solid #eee;
+          text-transform: uppercase;
+          border-radius: 0;
+          padding: 15px 10px; }
           .node-type-festival .abas .nav-tabs li a:hover {
-            background-position: 50% -104px; }
+            border-bottom: 1px solid #f4645f; }
       .node-type-festival .abas .nav-tabs li.active a {
-        background-position: 50% -104px; }
-        .node-type-festival .abas .nav-tabs li.active a:hover {
-          background-color: #f4645f;
-          color: #fff; }
-      .node-type-festival .abas .nav-tabs li.sobre a {
-        background-image: url(../img/icon_infofestival.png); }
-      .node-type-festival .abas .nav-tabs li.excursoes a {
-        background-image: url(../img/icon_excursoes.png); }
-      .node-type-festival .abas .nav-tabs li.compra-ingresso a {
-        background-image: url(../img/icon_compraingresso.png);
-        display: none; }
-      .node-type-festival .abas .nav-tabs li.venda-ingresso a {
-        background-image: url(../img/icon_vendaingresso.png); }
-      .node-type-festival .abas .nav-tabs li.oferece-carona a {
-        background-image: url(../img/icon_oferecendocarona.png); }
-      .node-type-festival .abas .nav-tabs li.procura-carona a {
-        background-image: url(../img/icon_procurandocarona.png); }
+        border-bottom: 4px solid #f4645f;
+        /*background-position: 50% -104px;
+        &:hover{
+            background-color: $salmao1;
+            color: #fff;
+        }*/ }
+  .node-type-festival .tab-pane h3 {
+    color: #fff;
+    margin-bottom: 5px;
+    padding: 0 25px 20px 0;
+    margin: 0 0 15px 0;
+    text-align: left;
+    font-size: 18px;
+    color: #404040;
+    border-bottom: 1px solid #efedee; }
   .node-type-festival .container-form {
     padding: 0 0 25px 0;
     margin: 0 0 50px 0;
@@ -1148,17 +1163,6 @@ header {
     /* procurando carona */ }
     .node-type-festival .container-form span.form-required {
       display: none; }
-    .node-type-festival .container-form h3 {
-      color: #fff;
-      margin-bottom: 5px;
-      padding: 25px 25px 20px 25px;
-      margin: 0 0 15px 0;
-      text-align: left;
-      font-size: 18px;
-      color: #404040;
-      border-bottom: 1px solid #efedee; }
-    .node-type-festival .container-form .block-formblock {
-      padding: 0 25px; }
     .node-type-festival .container-form p {
       width: 100%;
       display: inline-block;
@@ -1232,24 +1236,55 @@ header {
       margin-top: 15px; }
   .node-type-festival #publicacoes {
     float: left;
-    width: 100%; }
+    width: 100%;
+    margin-top: 50px; }
     .node-type-festival #publicacoes h2 {
       margin-bottom: 40px; }
   .node-type-festival .view-publicacoes-recentes-festival2 .view-filters {
     width: 100%;
-    padding: 15px 10px 10px 10px;
-    background: #f4645f;
+    padding: 0;
+    background: #fff;
     color: #fff;
     margin-top: 20px;
     margin-bottom: 0; }
     .node-type-festival .view-publicacoes-recentes-festival2 .view-filters label {
       display: none; }
     .node-type-festival .view-publicacoes-recentes-festival2 .view-filters .views-exposed-widget {
-      float: none;
+      /*float: none;
       margin: auto;
-      width: 40%; }
-      .node-type-festival .view-publicacoes-recentes-festival2 .view-filters .views-exposed-widget select, .node-type-festival .view-publicacoes-recentes-festival2 .view-filters .views-exposed-widget option, .node-type-festival .view-publicacoes-recentes-festival2 .view-filters .views-exposed-widget option[selected="selected"] {
-        text-align: center !important; }
+      width: 40%;
+      select, option, option[selected="selected"]{text-align: center !important;}*/
+      width: 100%;
+      padding: 0; }
+      .node-type-festival .view-publicacoes-recentes-festival2 .view-filters .views-exposed-widget a {
+        display: block;
+        float: left;
+        width: 25%;
+        padding: 60px 5px 25px 5px;
+        background-position: 50% 16px;
+        background-repeat: no-repeat;
+        border-radius: 0;
+        margin-right: 0;
+        border: none !important;
+        font-weight: 600;
+        text-align: center;
+        transition: all .3s; }
+        .node-type-festival .view-publicacoes-recentes-festival2 .view-filters .views-exposed-widget a:hover {
+          background-position: 50% -104px;
+          background-color: #f4645f;
+          color: #fff; }
+      .node-type-festival .view-publicacoes-recentes-festival2 .view-filters .views-exposed-widget a.active {
+        background-position: 50% -104px;
+        background-color: #f4645f;
+        color: #fff; }
+      .node-type-festival .view-publicacoes-recentes-festival2 .view-filters .views-exposed-widget .form-item-edit-type-all a {
+        background-image: url(../img/icon_infofestival.png); }
+      .node-type-festival .view-publicacoes-recentes-festival2 .view-filters .views-exposed-widget .form-item-edit-type-excursao a {
+        background-image: url(../img/icon_excursoes.png); }
+      .node-type-festival .view-publicacoes-recentes-festival2 .view-filters .views-exposed-widget .form-item-edit-type-venda-ingressos a {
+        background-image: url(../img/icon_vendaingresso.png); }
+      .node-type-festival .view-publicacoes-recentes-festival2 .view-filters .views-exposed-widget .form-item-edit-type-procura-carona a {
+        background-image: url(../img/icon_procurandocarona.png); }
   .node-type-festival .conteudo {
     float: left;
     width: 100%;
