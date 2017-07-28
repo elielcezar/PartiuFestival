@@ -1,4 +1,10 @@
 <?php include "header.tpl.php"; ?>  
+
+  <div class="mapa-festivais">
+    <!--h2>Festivais pelo Brasil</h2-->
+    <?php print views_embed_view('mapa_festivais2','default'); ?>   
+  </div>
+
    
     <!--div class="busca">
         <div class="container">

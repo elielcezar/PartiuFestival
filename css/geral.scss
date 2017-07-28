@@ -7,7 +7,7 @@ $salmao1: #f4645f;
 $salmao2: #ea4830;
 $salmao3: #f18469;
 //$marrom: #3b2b26;
-$marrom: #404040;
+$marrom: #3f3736;
 $marrom2: #19100e;
 $preto: #222;
 $cinza-claro: #efedee;
@@ -402,11 +402,11 @@ header{
       } 
 
 
-      li.minha-conta{
+      /*li.minha-conta{
         padding-top: 10px;
         margin-top: 10px;
         border-top: 1px solid #d2d2d2;
-      }       
+      }  */     
     }
 
     .menu.is-active{
@@ -669,12 +669,38 @@ header{
 .second-header{
     float: left;
     width: 100%;
-    padding: 0 0 5px 0;
+    padding: 0;
     text-align: center;
-    background: $salmao1;    
-    position: relative;
+    background: $marrom;    
+    position: relative;   
     
-    
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+
+        li{
+            margin: 0;
+            display: block;
+            width: 33.33%;
+            float: left;
+
+            a{
+                width: 100%;
+                color: #fff;
+                padding: 10px;
+                display: inline-block;
+
+                &:hover{
+                    background: $salmao1;
+                    color: #fff;
+                }
+            }
+        }
+    }
 }
 
 /*@media(max-width:767px){
@@ -699,7 +725,35 @@ header{
         letter-spacing: -1px;
     }
 
-    .busca{
+    .container-banner{
+        position: relative;
+        float: left;
+        width: 100%;
+    
+       
+
+        .slick-prev,
+           .slick-next{
+              position: absolute;
+              display: inline-block;
+              top: 50%;              
+              width: 25px;
+              text-indent: -5000em;
+              border: none;
+              height: 50px;
+              margin-top: -12px;
+          }
+          .slick-prev{
+            left: 0;
+            background: url(../img/slick-left.jpg) no-repeat center center;
+          }
+          .slick-next{
+            right: 0;
+            background: url(../img/slick-right.jpg) no-repeat center center;
+          }
+    }
+
+    /*.busca{
         width: 100%;
         height: 380px;        
         float: left;        
@@ -770,7 +824,7 @@ header{
                 padding: 8px 32px;
             }
         }
-    }
+    }*/
 
     .topnav {
         font-size: 14px; 
@@ -816,7 +870,7 @@ header{
      .proximos-festivais{
         float: left;
         width: 100%;
-        padding: 75px 0 0 0;
+        padding: 75px 0;
         border-top: 1px solid #ccc;
         width: 100%;
 
@@ -846,29 +900,7 @@ header{
                 padding: 14px 56px;
             }
         }
-      }
-
-      .mapa-festivais{
-        float: left;
-        width: 100%;
-        margin-top: 100px;
-        background: #fff;
-        position: relative;
-
-        h2{
-            z-index: 50;
-            position: absolute;
-            text-align: center;
-            width: 30%;
-            background: #fff;
-            padding: 25px;
-            top: -90px;
-            left: 50%;
-            margin-left: -15%;
-            border: 1px solid rgba(0,0,0,.08);
-            border-radius: 4px;
-        }
-      }
+      }     
 
     @media(max-width: 1285px){
         .busca #edit-combine-wrapper{width: 57%;}
@@ -904,6 +936,29 @@ header{
 
 
 /* mapa */
+.mapa-festivais{
+    float: left;
+    width: 100%;
+    //margin-top: 100px;
+    background: #fff;
+    position: relative;
+    //margin-bottom: 50px;
+
+    /*h2{
+        z-index: 50;
+        position: absolute;
+        text-align: center;
+        width: 30%;
+        background: #fff;
+        padding: 25px;
+        top: -90px;
+        left: 50%;
+        margin-left: -15%;
+        border: 1px solid rgba(0,0,0,.08);
+        border-radius: 4px;
+    }*/
+}
+
 .getlocations_map_links{display: none;} 
 .getlocations_map_wrapper_inner{position: relative;}
 #edit-title-wrapper label{display: none;}
@@ -1060,7 +1115,7 @@ header{
     #principal{
         float: left;
         width: 100%;
-        margin: 50px 0;
+        margin: 0 0 50px 0;
     }
 
     .busca{
@@ -1238,6 +1293,8 @@ header{
 
 .node-type-festival{
 
+background: #fff;
+
 .shortcuts .nav-tabs{text-align: center; margin-top: 25px; margin-bottom: -50px;}
 
   .header{    
@@ -1258,7 +1315,7 @@ header{
     }
   }
 
-  .basic-info{
+  /*.basic-info{
 
         display: none;
 
@@ -1270,10 +1327,7 @@ header{
         border: none;
         float: left;          
 
-       h1{
-            font-weight: 600;
-            margin-top: 0;
-        }
+       
         p,
         .date-display-range,
         .date-display-remaining{display: inline;}
@@ -1282,14 +1336,74 @@ header{
             margin: 25px 0 -55px 0;
             display: none;
         }
-    }
+
+    }*/
 
     .acoes{
         margin-top: 50px;
 
         h1{
-            text-align: center;
-            margin: 40px 0 60px 0;
+            text-align: left;
+            float: left;
+            color: #333;
+            font-weight: 700;
+            font-size: 50px;
+            letter-spacing: -1px;
+            margin: 0 25px 20px 0;
+        }
+
+        .view-festival-data{
+
+            padding: 10px 0;
+            display: block;
+            width: 100%;
+            border-bottom: 1px solid #eee;
+            border-top: 1px solid #eee;
+            margin: 0 0 20px 0;
+            float: left;
+            margin-right: 20px;
+
+            a{
+                padding: 7px 15px;
+                font-weight: 600;
+                display: inline-block;
+            }
+
+            .data,
+            .local{
+                float: left;
+                padding: 7px 0;
+                //width: 20%;
+                margin-right: 50px;
+            }
+
+            .facebook{
+                float: left;
+                //width: 25%;
+                margin-right: 50px;
+
+                a{
+                    background: #2b4b92;
+                    color: #fff;
+                    border-radius: 3px;
+                }
+            }           
+
+            /*span.date-display-single,
+            .date-display-range {
+                padding: 10px 0;
+                display: block;
+                width: 100%;
+                border-bottom: 1px solid #eee;
+                border-top: 1px solid #eee;
+                margin: 0 0 20px 0;
+            }
+
+            .date-display-remaining{
+                font-weight: bold;
+                //margin-bottom: 40px;
+            }*/
+
         }
     }
 
@@ -1308,22 +1422,7 @@ header{
         margin-bottom: 25px;
 
         h2{display: none;}
-
-        span.date-display-single,
-        .date-display-range {
-            padding: 10px 0;
-            display: block;
-            width: 100%;
-            border-bottom: 1px solid #eee;
-            border-top: 1px solid #eee;
-            margin: 0 0 20px 0;
-        }
-
-        .date-display-remaining{
-            font-weight: bold;
-            margin-bottom: 40px;
-        }
-
+        
         p{
             line-height: 24px;
             margin: 10px 10px 10px 0 !important;
@@ -1366,13 +1465,32 @@ header{
         width: 100%;
 
         h2{font-size: 16px;}
+
+        .ingressos{
+            a{
+                border: 2px solid $salmao1;
+                color: $salmao1;
+                border-radius: 3px;
+                transition: .3s all;
+                display: block;
+                padding: 25px;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 900;
+
+                &:hover{
+                    background: $salmao1;
+                    color: #fff;
+                }
+            }
+        }
     }
 
     .abas{
         //display: none;
 
         padding: 0;    
-        margin: 0;
+        margin: 15px 0 0 0;
         border: none;
         float: left;
         width: 100%; 
@@ -1428,20 +1546,25 @@ header{
 
     /* formularios de envio*/
     .tab-pane{
+        .card{
+            float: left;
+            width: 100%;
+            background: #f9f7f4;
+            border: none;
+        }
         h3{
             color: #fff;
             margin-bottom: 5px;
             padding: 0 25px 20px 0;
-            margin: 0 0 15px 0;
+            margin: 0;
             text-align: left;            
             font-size: 18px;
             color: $marrom;
-            border-bottom: 1px solid $cinza-claro;
         }
     }
     .container-form{
-        padding: 0 0 25px 0;
-        margin: 0 0 50px 0;        
+        padding: 0;
+        margin: 0;        
         border-radius: 2px;
         text-align: left;
 
@@ -1769,8 +1892,7 @@ header{
   .proximos-festivais{
     margin-top: 50px;
     padding: 75px 0;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    background: #f9f7f4;
     float: left;
     width: 100%;
 
@@ -2115,10 +2237,12 @@ header{
             font-weight: 600;
             margin-bottom: 40px;
         }
-        .pane-node-product-commerce-price{
-            font-size: 18px;
-            margin-bottom: 50px;
-        }
+        .commerce-product-field-commerce-price{font-weight: bold;}
+        .pane-node-product-commerce-price,
+        .pane-node-body{
+            //font-size: 21px;
+            margin-bottom: 35px;
+        }        
 
         .views-field-commerce-price{
             span, div{text-decoration: line-through;}
@@ -2140,7 +2264,7 @@ header{
             span.aviso{
                 display: inline-block;
                 margin-bottom: 20px;   
-                font-size: 13px;
+                font-size: 14px;
                 padding-left: 60px;
                 background: transparent url(../img/icon_ticket.png) left center no-repeat;
             }

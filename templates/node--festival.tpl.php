@@ -41,14 +41,92 @@
 
 				
 
-				<div class="card acoes">
+				<div class="acoes">
 				<div class="row">	
 
 				<div class="col-sm-12">
 					<h1><?php print $title; ?></h1>
+					<?php print views_embed_view('festival_data', 'default', $nid); ?>					
 				</div>
 
-				<div class="col-sm-3">
+				<div class="col-sm-8">
+					<div class="tab-content">					 
+
+					<div class="tab-pane active" id="sobre">
+			      			<div class="container-form">
+			      				<?php print views_embed_view('festival_sobre', 'default', $nid); ?>
+			      			</div>
+				      </div>				      
+
+				      <div class="tab-pane" id="excursoes">
+					      	<div class="card">
+					      		<h3>Você está organizando uma excursão para esse festival? Divulgue agora mesmo!</h3>
+					      		<?php if($user->uid){ ?>
+					      			<div class="container-form form-excursoes">
+					      				
+					      			</div>
+					      		<?php } else { ?>
+									<div class="aviso"><a href="http://partiufestival.com/user/register">Crie uma conta</a> ou <a href="http://partiufestival.com/user">faça login</a> para interagir com o público do Partiu Festival.</div>
+								<?php } ?>
+							</div>
+				      </div>
+
+				      <div class="tab-pane" id="compra-ingresso">
+					      	<div class="card">
+					      		<h3>Procurando ingressos para comprar? Deixe o seu recado!</h3>
+					      		<?php if($user->uid){ ?>
+				      			<div class="container-form form-compra">
+				      				
+				      			</div>
+				      			<?php } else { ?>
+									<div class="aviso"><a href="http://partiufestival.com/user/register">Crie uma conta</a> ou <a href="http://partiufestival.com/user">faça login</a> para interagir com o público do Partiu Festival.</div>
+								<?php } ?>
+							</div>
+				      </div>
+
+				      <div class="tab-pane" id="venda-ingresso">
+					      	<div class="card">
+					      		<h3>Você tem ingressos para esse festival? Então publique o seu anúncio e venda já!</h3>
+					      		<?php if($user->uid){ ?>
+				      			<div class="container-form form-venda">
+				      				
+				      			</div>	
+				      			<?php } else { ?>
+									<div class="aviso"><a href="http://partiufestival.com/user/register">Crie uma conta</a> ou <a href="http://partiufestival.com/user">faça login</a> para interagir com o público do Partiu Festival.</div>
+								<?php } ?>
+							</div>
+				      </div>
+
+				      <div class="tab-pane" id="procura-carona">
+					      	<div class="card">
+					      		<h3>Procurando carona para esse festival? Deixe aqui sua mensagem!</h3>
+					      		<?php if($user->uid){ ?>
+				      			<div class="container-form form-procura-carona">
+				      				
+				      			</div>
+				      			<?php } else { ?>
+									<div class="aviso"><a href="http://partiufestival.com/user/register">Crie uma conta</a> ou <a href="http://partiufestival.com/user">faça login</a> para interagir com o público do Partiu Festival.</div>
+								<?php } ?>
+							</div>
+				      </div>
+
+				       <div class="tab-pane" id="oferece-carona">
+					       	<div class="card">
+					       		<?php if($user->uid){ ?>
+				      			<div class="container-form form-oferece-carona">
+				      				<h3>Sobrando lugar no carro? Ofereça carona aqui!</h3>
+				      			</div>
+				      			<?php } else { ?>
+									<div class="aviso"><a href="http://partiufestival.com/user/register">Crie uma conta</a> ou <a href="http://partiufestival.com/user">faça login</a> para interagir com o público do Partiu Festival.</div>
+								<?php } ?>
+							</div>
+				      </div>
+				      					      
+
+			    	</div>
+				</div>
+
+				<div class="col-sm-4">					
 					<div class="container-abas">
 				    	<div class="abas">
 							    <ul class="nav nav-tabs">
@@ -59,105 +137,37 @@
 							      <li class="venda-ingresso"><a href="#venda-ingresso" data-toggle="tab">Venda seu Ingresso</a></li>
 							      <!--li class="oferece-carona"><a href="#oferece-carona" data-toggle="tab">Ofereça Carona</a></li-->
 							      <li class="procura-carona"><a href="#procura-carona" data-toggle="tab">Procure Carona</a></li>
-							      <?php print views_embed_view('festival_info', 'default', $nid); ?>
+							      <?php //print views_embed_view('festival_info', 'default', $nid); ?>
 							    </ul>
 						</div>
 					</div>
-				</div>				
-
-				<div class="col-sm-9">
-					<div class="tab-content">					 
-
-					<div class="tab-pane active" id="sobre">
-			      			<div class="container-form">
-			      				<?php print views_embed_view('festival_sobre', 'default', $nid); ?>
-			      			</div>
-				      </div>				      
-
-				      <div class="tab-pane" id="excursoes">
-				      		<h3>Você está organizando uma excursão para esse festival? Divulgue agora mesmo!</h3>
-				      		<?php if($user->uid){ ?>
-				      			<div class="container-form form-excursoes">
-				      				
-				      			</div>
-				      		<?php } else { ?>
-								<div class="aviso"><a href="http://partiufestival.com/user/register">Crie uma conta</a> ou <a href="http://partiufestival.com/user">faça login</a> para interagir com o público do Partiu Festival.</div>
-							<?php } ?>
-				      </div>
-
-				      <div class="tab-pane" id="compra-ingresso">
-				      		<h3>Procurando ingressos para comprar? Deixe o seu recado!</h3>
-				      		<?php if($user->uid){ ?>
-			      			<div class="container-form form-compra">
-			      				
-			      			</div>
-			      			<?php } else { ?>
-								<div class="aviso"><a href="http://partiufestival.com/user/register">Crie uma conta</a> ou <a href="http://partiufestival.com/user">faça login</a> para interagir com o público do Partiu Festival.</div>
-							<?php } ?>
-				      </div>
-
-				      <div class="tab-pane" id="venda-ingresso">
-				      		<h3>Você tem ingressos para esse festival? Então publique o seu anúncio e venda já!</h3>
-				      		<?php if($user->uid){ ?>
-			      			<div class="container-form form-venda">
-			      				
-			      			</div>	
-			      			<?php } else { ?>
-								<div class="aviso"><a href="http://partiufestival.com/user/register">Crie uma conta</a> ou <a href="http://partiufestival.com/user">faça login</a> para interagir com o público do Partiu Festival.</div>
-							<?php } ?>
-				      </div>
-
-				      <div class="tab-pane" id="procura-carona">
-				      		<?php if($user->uid){ ?>
-			      			<div class="container-form form-procura-carona">
-			      				<h3>Procurando carona para esse festival? Deixe aqui sua mensagem!</h3>
-			      			</div>
-			      			<?php } else { ?>
-								<div class="aviso"><a href="http://partiufestival.com/user/register">Crie uma conta</a> ou <a href="http://partiufestival.com/user">faça login</a> para interagir com o público do Partiu Festival.</div>
-							<?php } ?>
-				      </div>
-
-				       <div class="tab-pane" id="oferece-carona">
-				       		<?php if($user->uid){ ?>
-			      			<div class="container-form form-oferece-carona">
-			      				<h3>Sobrando lugar no carro? Ofereça carona aqui!</h3>
-			      			</div>
-			      			<?php } else { ?>
-								<div class="aviso"><a href="http://partiufestival.com/user/register">Crie uma conta</a> ou <a href="http://partiufestival.com/user">faça login</a> para interagir com o público do Partiu Festival.</div>
-							<?php } ?>
-				      </div>
-				      					      
-
-			    	</div>
-				</div>				
+				</div>
+					
 
 				</div>	
 
-				</div>	
-
-				<?php if($user->uid){ ?>		
-
-			    <div id="publicacoes">
-			    	<h2>Encontre pessoas oferecendo o que você procura</h2>
-			    	<?php print views_embed_view('publicacoes_recentes_festival2', 'default'); ?>
-			    </div>
-
-			    <?php } ?>				
+				</div>							
 
 			</div>				
 
         </div>	
 
-
-
 		<!--div class="sobre">
 			<?php //print views_embed_view('festival_sobre', 'default', $nid); ?>
 		</div-->
 
-
-   	
-
 	</div>
+
+		<?php //if($user->uid){ ?>		
+
+			 <div id="publicacoes">
+			    <div class="container">
+			    	<h2>Encontre pessoas oferecendo o que você procura</h2>
+			    	<?php print views_embed_view('publicacoes_recentes_festival2', 'default'); ?>
+			    </div>
+			 </div>
+
+		<?php //} ?>		
 
 	</div>
 
@@ -235,9 +245,13 @@ jQuery(document).ready(function ($) {
     $('p.acoes a').addClass('colorbox-node');
 
 
+    /* move link de ingresso */
+    var ingressos = $('.view-festival-data .ingressos').detach();
+    $(ingressos).prependTo('.container-abas');
+
     /* unwrap itens Facebook e Ingressos */
-    var links = $('.view-festival-info li').detach();
-    $(links).appendTo('.nav.nav-tabs');
+    /*var links = $('.view-festival-info li').detach();
+    $(links).appendTo('.nav.nav-tabs');*/
 
 
  });

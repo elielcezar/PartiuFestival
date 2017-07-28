@@ -1,14 +1,20 @@
 <?php include "header.tpl.php"; ?>     
 
-    <div class="busca">         
+    <!--div class="busca">         
         <div class="busca-home">
             <h2><strong>Festivais</strong>, <strong>Excursões</strong> e <strong>Caronas</strong> em um só lugar!</h2>
-            <?php
-                /*$block = module_invoke('views', 'block_view', '-exp-festivais-page_1');
-                print render($block['content']);*/
-            ?>
+            
+        </div>
+    </div-->
+
+    <div class="container-banner">
+        <div class="banner-destaque-home">
+          <div><img src="http://partiufestival.com/sites/default/files/insti.jpg" class="img-responsive" /></div>
+          <div><img src="http://partiufestival.com/sites/default/files/insti.jpg" class="img-responsive" /></div>
         </div>
     </div>
+
+    
 
     <div class="content-section-b" id="excursao">
         <div class="container">
@@ -60,11 +66,6 @@
             <a class="btn"  href="http://partiufestival.com/festivais">Ver Todos</a>
         </div>
       </div>
-  </div>
-
-  <div class="mapa-festivais">
-    <!--h2>Festivais pelo Brasil</h2-->
-    <?php print views_embed_view('mapa_festivais2','default'); ?>   
   </div>
 
 <?php include "footer.tpl.php"; ?>

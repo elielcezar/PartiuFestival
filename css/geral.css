@@ -5,7 +5,7 @@ html {
 
 body {
   background: #f9f7f4;
-  color: #404040;
+  color: #3f3736;
   font-family: 'Raleway', sans-serif; }
 
 a,
@@ -17,7 +17,7 @@ a:visited {
   a:active:hover,
   a:link:hover,
   a:visited:hover {
-    color: #404040; }
+    color: #3f3736; }
 
 body,
 h1,
@@ -58,7 +58,7 @@ h1.page-title {
       transition: all .3s; }
       .abas li a:hover {
         color: #fff;
-        background: #404040; }
+        background: #3f3736; }
   .abas li.active a {
     background: #f4645f;
     color: #fff; }
@@ -183,7 +183,7 @@ button:focus,
 .btn-primary:active,
 .btn-primary.active,
 form input[type="submit"]:hover {
-  background: #404040 !important;
+  background: #3f3736 !important;
   border-color: #222 !important;
   color: #fff !important;
   box-shadow: none !important;
@@ -230,7 +230,7 @@ header {
     header a:active:hover,
     header a:link:hover,
     header a:visited:hover {
-      color: #404040; }
+      color: #3f3736; }
   header ul {
     margin: 8px 0 0 0;
     float: left;
@@ -349,7 +349,12 @@ header {
     border-radius: 4px;
     font-size: 14px;
     text-indent: 0;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); }
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    /*li.minha-conta{
+      padding-top: 10px;
+      margin-top: 10px;
+      border-top: 1px solid #d2d2d2;
+    }  */ }
     header .menu li {
       list-style-image: none;
       list-style-type: none;
@@ -362,10 +367,6 @@ header {
         padding: 10px 20px; }
         header .menu li a:hover {
           color: #f4645f !important; }
-    header .menu li.minha-conta {
-      padding-top: 10px;
-      margin-top: 10px;
-      border-top: 1px solid #d2d2d2; }
   header .menu.is-active {
     height: auto;
     opacity: 1; }
@@ -558,10 +559,30 @@ header {
 .second-header {
   float: left;
   width: 100%;
-  padding: 0 0 5px 0;
+  padding: 0;
   text-align: center;
-  background: #f4645f;
+  background: #3f3736;
   position: relative; }
+  .second-header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase; }
+    .second-header ul li {
+      margin: 0;
+      display: block;
+      width: 33.33%;
+      float: left; }
+      .second-header ul li a {
+        width: 100%;
+        color: #fff;
+        padding: 10px;
+        display: inline-block; }
+        .second-header ul li a:hover {
+          background: #f4645f;
+          color: #fff; }
 
 /*@media(max-width:767px){
     .view-menu-usuario{display: none;}
@@ -577,67 +598,102 @@ header {
 }*/
 /*--- HOME -------------------------------------------------------------*/
 .front {
-  background: #fff; }
+  background: #fff;
+    /*.busca{
+        width: 100%;
+        height: 380px;        
+        float: left;        
+        background: $preto url(../img/1200.jpg) center center no-repeat;
+        background-size: cover;
+        border-bottom: 3px solid #ccc;
+        position: relative;        
+
+        .busca-home{
+            width: 70%;
+            position: absolute;
+            bottom: 36%;
+            left: 50%;
+            margin-left: -35%;
+            padding: 20px;
+            background: rgba(0,0,0,0.7)
+        }
+
+        h2{
+            color: #fff;
+            text-align: center;
+            margin-top: 0;
+            font-weight: 300;
+            line-height: 42px;
+            font-size: 26px;
+            letter-spacing: 1px;
+            margin-bottom: 5px;            
+
+            strong{font-weight: 800;}
+        }
+
+        label{display: none;}
+
+        .help-block{display: none;}
+
+        span.ou{
+            float: left;
+            display: block;            
+            color: #fff;
+            margin: 15px 15px 0 0;
+        }        
+
+        #edit-combine-wrapper{
+            width: 59%;
+            float: left;
+        }
+
+        #edit-field-data-value-wrapper{
+            width: 24%;
+            float: left;
+            padding: 0;
+           margin: 7px 14px 0 0;
+
+            .form-item-field-data-value-value-date,
+            #edit-field-data-value-value,
+            #edit-field-data-value-value-datepicker-popup-0,
+            .form-type-date-popup{width: 100%;}
+        } 
+
+        #edit-sort-bef-combine-wrapper{display: none;}
+
+        .views-submit-button{
+            float: left;
+            width: 10%;            
+
+            button{
+                margin-top: 0;
+                padding: 8px 32px;
+            }
+        }
+    }*/ }
   .front h2 {
     font-weight: 800;
     letter-spacing: -1px; }
-  .front .busca {
-    width: 100%;
-    height: 380px;
+  .front .container-banner {
+    position: relative;
     float: left;
-    background: #222 url(../img/1200.jpg) center center no-repeat;
-    background-size: cover;
-    border-bottom: 3px solid #ccc;
-    position: relative; }
-    .front .busca .busca-home {
-      width: 70%;
+    width: 100%; }
+    .front .container-banner .slick-prev,
+    .front .container-banner .slick-next {
       position: absolute;
-      bottom: 36%;
-      left: 50%;
-      margin-left: -35%;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.7); }
-    .front .busca h2 {
-      color: #fff;
-      text-align: center;
-      margin-top: 0;
-      font-weight: 300;
-      line-height: 42px;
-      font-size: 26px;
-      letter-spacing: 1px;
-      margin-bottom: 5px; }
-      .front .busca h2 strong {
-        font-weight: 800; }
-    .front .busca label {
-      display: none; }
-    .front .busca .help-block {
-      display: none; }
-    .front .busca span.ou {
-      float: left;
-      display: block;
-      color: #fff;
-      margin: 15px 15px 0 0; }
-    .front .busca #edit-combine-wrapper {
-      width: 59%;
-      float: left; }
-    .front .busca #edit-field-data-value-wrapper {
-      width: 24%;
-      float: left;
-      padding: 0;
-      margin: 7px 14px 0 0; }
-      .front .busca #edit-field-data-value-wrapper .form-item-field-data-value-value-date,
-      .front .busca #edit-field-data-value-wrapper #edit-field-data-value-value,
-      .front .busca #edit-field-data-value-wrapper #edit-field-data-value-value-datepicker-popup-0,
-      .front .busca #edit-field-data-value-wrapper .form-type-date-popup {
-        width: 100%; }
-    .front .busca #edit-sort-bef-combine-wrapper {
-      display: none; }
-    .front .busca .views-submit-button {
-      float: left;
-      width: 10%; }
-      .front .busca .views-submit-button button {
-        margin-top: 0;
-        padding: 8px 32px; }
+      display: inline-block;
+      top: 50%;
+      width: 25px;
+      text-indent: -5000em;
+      border: none;
+      height: 50px;
+      margin-top: -12px; }
+    .front .container-banner .slick-prev {
+      left: 0;
+      background: url(../img/slick-left.jpg) no-repeat center center; }
+    .front .container-banner .slick-next {
+      right: 0;
+      background: url(../img/slick-right.jpg) no-repeat center center; }
   .front .topnav {
     font-size: 14px; }
   .front .lead {
@@ -672,7 +728,7 @@ header {
   .front .proximos-festivais {
     float: left;
     width: 100%;
-    padding: 75px 0 0 0;
+    padding: 75px 0;
     border-top: 1px solid #ccc;
     width: 100%; }
     .front .proximos-festivais h2 {
@@ -693,24 +749,6 @@ header {
       .front .proximos-festivais .veja-mais .btn {
         font-size: 16px;
         padding: 14px 56px; }
-  .front .mapa-festivais {
-    float: left;
-    width: 100%;
-    margin-top: 100px;
-    background: #fff;
-    position: relative; }
-    .front .mapa-festivais h2 {
-      z-index: 50;
-      position: absolute;
-      text-align: center;
-      width: 30%;
-      background: #fff;
-      padding: 25px;
-      top: -90px;
-      left: 50%;
-      margin-left: -15%;
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      border-radius: 4px; }
   @media (max-width: 1285px) {
     .front .busca #edit-combine-wrapper {
       width: 57%; } }
@@ -740,6 +778,25 @@ header {
       margin-top: 25px; } }
 
 /* mapa */
+.mapa-festivais {
+  float: left;
+  width: 100%;
+  background: #fff;
+  position: relative;
+  /*h2{
+      z-index: 50;
+      position: absolute;
+      text-align: center;
+      width: 30%;
+      background: #fff;
+      padding: 25px;
+      top: -90px;
+      left: 50%;
+      margin-left: -15%;
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 4px;
+  }*/ }
+
 .getlocations_map_links {
   display: none; }
 
@@ -879,7 +936,7 @@ header {
 .page-festivais #principal {
   float: left;
   width: 100%;
-  margin: 50px 0; }
+  margin: 0 0 50px 0; }
 .page-festivais .busca {
   width: 100%;
   height: 240px;
@@ -1006,6 +1063,30 @@ header {
     padding-top: 0; } }
 /*--- PAGINA DE UM FESTIVAL -------------------------------------------------------------*/
 .node-type-festival {
+  background: #fff;
+  /*.basic-info{
+
+        display: none;
+
+        padding: 25px 0;
+        margin: 0 0 50px 0;
+        width: 100%;
+        text-align: center;
+        background: #fff;
+        border: none;
+        float: left;          
+
+       
+        p,
+        .date-display-range,
+        .date-display-remaining{display: inline;}
+
+        .ingressos{
+            margin: 25px 0 -55px 0;
+            display: none;
+        }
+
+    }*/
   /* formularios de envio*/
   /* filtro de posts */ }
   .node-type-festival .shortcuts .nav-tabs {
@@ -1026,30 +1107,55 @@ header {
       background-size: auto 100%; }
       .node-type-festival .header .capa img {
         display: none; }
-  .node-type-festival .basic-info {
-    display: none;
-    padding: 25px 0;
-    margin: 0 0 50px 0;
-    width: 100%;
-    text-align: center;
-    background: #fff;
-    border: none;
-    float: left; }
-    .node-type-festival .basic-info h1 {
-      font-weight: 600;
-      margin-top: 0; }
-    .node-type-festival .basic-info p,
-    .node-type-festival .basic-info .date-display-range,
-    .node-type-festival .basic-info .date-display-remaining {
-      display: inline; }
-    .node-type-festival .basic-info .ingressos {
-      margin: 25px 0 -55px 0;
-      display: none; }
   .node-type-festival .acoes {
     margin-top: 50px; }
     .node-type-festival .acoes h1 {
-      text-align: center;
-      margin: 40px 0 60px 0; }
+      text-align: left;
+      float: left;
+      color: #333;
+      font-weight: 700;
+      font-size: 50px;
+      letter-spacing: -1px;
+      margin: 0 25px 20px 0; }
+    .node-type-festival .acoes .view-festival-data {
+      padding: 10px 0;
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid #eee;
+      border-top: 1px solid #eee;
+      margin: 0 0 20px 0;
+      float: left;
+      margin-right: 20px;
+            /*span.date-display-single,
+            .date-display-range {
+                padding: 10px 0;
+                display: block;
+                width: 100%;
+                border-bottom: 1px solid #eee;
+                border-top: 1px solid #eee;
+                margin: 0 0 20px 0;
+            }
+
+            .date-display-remaining{
+                font-weight: bold;
+                //margin-bottom: 40px;
+            }*/ }
+      .node-type-festival .acoes .view-festival-data a {
+        padding: 7px 15px;
+        font-weight: 600;
+        display: inline-block; }
+      .node-type-festival .acoes .view-festival-data .data,
+      .node-type-festival .acoes .view-festival-data .local {
+        float: left;
+        padding: 7px 0;
+        margin-right: 50px; }
+      .node-type-festival .acoes .view-festival-data .facebook {
+        float: left;
+        margin-right: 50px; }
+        .node-type-festival .acoes .view-festival-data .facebook a {
+          background: #2b4b92;
+          color: #fff;
+          border-radius: 3px; }
   .node-type-festival .aviso {
     width: 100%;
     border: 2px solid #f4645f;
@@ -1063,17 +1169,6 @@ header {
     margin-bottom: 25px; }
     .node-type-festival .view-festival-sobre h2 {
       display: none; }
-    .node-type-festival .view-festival-sobre span.date-display-single,
-    .node-type-festival .view-festival-sobre .date-display-range {
-      padding: 10px 0;
-      display: block;
-      width: 100%;
-      border-bottom: 1px solid #eee;
-      border-top: 1px solid #eee;
-      margin: 0 0 20px 0; }
-    .node-type-festival .view-festival-sobre .date-display-remaining {
-      font-weight: bold;
-      margin-bottom: 40px; }
     .node-type-festival .view-festival-sobre p {
       line-height: 24px;
       margin: 10px 10px 10px 0 !important; }
@@ -1101,9 +1196,22 @@ header {
     width: 100%; }
     .node-type-festival .container-abas h2 {
       font-size: 16px; }
+    .node-type-festival .container-abas .ingressos a {
+      border: 2px solid #f4645f;
+      color: #f4645f;
+      border-radius: 3px;
+      transition: .3s all;
+      display: block;
+      padding: 25px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 900; }
+      .node-type-festival .container-abas .ingressos a:hover {
+        background: #f4645f;
+        color: #fff; }
   .node-type-festival .abas {
     padding: 0;
-    margin: 0;
+    margin: 15px 0 0 0;
     border: none;
     float: left;
     width: 100%; }
@@ -1142,18 +1250,22 @@ header {
             background-color: $salmao1;
             color: #fff;
         }*/ }
+  .node-type-festival .tab-pane .card {
+    float: left;
+    width: 100%;
+    background: #f9f7f4;
+    border: none; }
   .node-type-festival .tab-pane h3 {
     color: #fff;
     margin-bottom: 5px;
     padding: 0 25px 20px 0;
-    margin: 0 0 15px 0;
+    margin: 0;
     text-align: left;
     font-size: 18px;
-    color: #404040;
-    border-bottom: 1px solid #efedee; }
+    color: #3f3736; }
   .node-type-festival .container-form {
-    padding: 0 0 25px 0;
-    margin: 0 0 50px 0;
+    padding: 0;
+    margin: 0;
     border-radius: 2px;
     text-align: left;
     /* geral */
@@ -1430,8 +1542,7 @@ header {
   .node-type-festival .proximos-festivais {
     margin-top: 50px;
     padding: 75px 0;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    background: #f9f7f4;
     float: left;
     width: 100%; }
     .node-type-festival .proximos-festivais h2 {
@@ -1735,10 +1846,14 @@ header {
     .node-type-produto-externo section.conteudo h1 {
       font-weight: 600;
       margin-bottom: 40px; }
+    .node-type-ingresso section.conteudo .commerce-product-field-commerce-price,
+    .node-type-produto-externo section.conteudo .commerce-product-field-commerce-price {
+      font-weight: bold; }
     .node-type-ingresso section.conteudo .pane-node-product-commerce-price,
-    .node-type-produto-externo section.conteudo .pane-node-product-commerce-price {
-      font-size: 18px;
-      margin-bottom: 50px; }
+    .node-type-ingresso section.conteudo .pane-node-body,
+    .node-type-produto-externo section.conteudo .pane-node-product-commerce-price,
+    .node-type-produto-externo section.conteudo .pane-node-body {
+      margin-bottom: 35px; }
     .node-type-ingresso section.conteudo .views-field-commerce-price,
     .node-type-produto-externo section.conteudo .views-field-commerce-price {
       font-size: 16px;
@@ -1763,7 +1878,7 @@ header {
       .node-type-produto-externo section.conteudo #edit-line-item-fields--2 span.aviso {
         display: inline-block;
         margin-bottom: 20px;
-        font-size: 13px;
+        font-size: 14px;
         padding-left: 60px;
         background: transparent url(../img/icon_ticket.png) left center no-repeat; }
     .node-type-ingresso section.conteudo .field-name-field-link,
@@ -2278,7 +2393,7 @@ body.page-legal-accept .conteudo {
 
 footer {
   padding: 50px 0;
-  background-color: #404040;
+  background-color: #3f3736;
   color: #fff;
   width: 100%;
   float: left; }

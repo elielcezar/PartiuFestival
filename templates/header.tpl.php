@@ -39,9 +39,12 @@ $uid = $GLOBALS['user']->uid;
 
     </header> 
 
-    <!--div class="second-header">     
-
-      
-
-
-    </div--> 
+    <div class="second-header">
+      <div class="container">
+        <ul>
+          <li><a href="http://partiufestival.com/festivais">Festivais</a></li>
+          <li><a href="http://partiufestival.com/ingressos">Ingressos</a></li>
+          <li><a href="http://partiufestival.com/cadastro-de-festivais">Cadastre um Festival</a></li>
+        </ul>
+      </div>
+    </div> 

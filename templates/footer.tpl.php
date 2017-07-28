@@ -250,6 +250,8 @@
 
 <script src="<?php print base_path() . path_to_theme() ?>/js/jquery.maskMoney.js" type="text/javascript"></script>
 
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
 <script type="text/javascript">
 
 jQuery(function( $ ){
@@ -294,35 +296,22 @@ jQuery(function( $ ){
 
 	});
 
-    /* home */ 
-
-    //$('.page-front .view-filters').appendTo('.getlocations_map_wrapper_inner');   
-
-    /* mapa */
-
-    //$('.page-mapa-dos-festivais .view-filters').appendTo('.getlocations_map_wrapper_inner');    
-
-    /* pesquisa mapa */
-
-    //$('#edit-title-wrapper #edit-title').attr('placeholder','Pesquise pelo nome do festival'); 
-
     /* mascara no form de edicao de venda de ingresso */
-
     $('.page-node-edit.node-type-venda-ingressos .field-name-field-valor input').maskMoney();
 
     /* pagina de exclusao de festival */
-
     $('.page-node-delete.node-type-festival .region.region-content').addClass('container');
-
     $('.page-node-delete.node-type-festival #block-system-main').addClass('card');
 
-
-
     /* pop-up / form de cdastro de excursoes */
-
     $('#cadastro-excursoes #edit-field-cidade2 #edit-field-cidade2-und').attr('placeholder','Saindo de');
 
-   
+   $('.banner-destaque-home').slick({
+      //arrows: false,
+      infinite: true,
+      speed: 500,
+      fade: true
+    });
 
 	
 
@@ -357,6 +346,9 @@ jQuery(document).ready(function ($) {
            $(this).html('<img src="http://partiufestival.com/sites/all/themes/partiucadastro/img/ingresso-thumb.jpg" /  >');
       } 
     });
+
+    /* ajuste na tela de vendas por usuario */
+    $('.page-minhas-vendas .conteudo table').addClass('table table-hover table-striped')
 });
 
 </script>
