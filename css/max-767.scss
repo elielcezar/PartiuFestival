@@ -10,9 +10,10 @@ $preto: #222;
 $cinza-claro: #efedee;
 
 
+
 @media(max-width:767px){
 
-	#admin-menu{display: none !important;}
+	/*#admin-menu{display: none !important;}
 	
 	header{
 		height: 153px;
@@ -53,16 +54,16 @@ $cinza-claro: #efedee;
 		    top: 35px;
 		    z-index: 50;
 		}
-	}
+	}*/
 
-	.not-logged-in{
+	/*.not-logged-in{
 		header{
 			#block-commerce-cart-cart {
 				position: absolute;
 	    		right: 55px;
 			}
 		}
-	}
+	}*/
 
 
 	/*--- HOME --------------------------------------------------------*/

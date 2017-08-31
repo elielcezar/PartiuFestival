@@ -4,17 +4,17 @@
 
 
 
-                <div class="col-sm-12 col-md-6">
+                <div class="col-sm-12 col-md-6 col-sm-8">
 
                     <h3>Está faltando algum festival em nossa lista?</h3>
 
                 </div>
 
-                <div class="col-sm-12 col-md-6">
+                <div class="col-sm-12 col-md-6 col-sm-4">
 
-                    <a href="#" class="btn" data-toggle="modal" data-target="#cadastro-festivais">Envie agora mesmo!</a>
+                    <a href="#" class="btn envie-agora" data-toggle="modal" data-target="#cadastro-festivais">Envie agora mesmo!</a>
 
-                    <a href="http://partiufestival.com/festivais" class="btn">confira a Lista Completa</a>
+                    <a href="http://partiufestival.com/festivais" class="btn confira-lista">Confira a Lista Completa</a>
 
                 </div>
 
@@ -327,7 +327,7 @@ jQuery(function( $ ){
 
 jQuery(document).ready(function ($) {
 
-    $('#edit-combine').attr('placeholder','Pesquise pelo nome do Festival, Cidade ou Estado e...');
+    $('#edit-combine').attr('placeholder','Pesquise por Festival, Cidade ou Estado');
     $('#edit-field-data-value-value-datepicker-popup-0').attr('placeholder','Pesquise a partir de uma data'); 
     $('#edit-combine-autocomplete-aria-live').click(function(){
         $('header #edit-combine-wrapper .form-item-combine').submit();

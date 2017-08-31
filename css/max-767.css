@@ -1,46 +1,54 @@
 @media (max-width: 767px) {
-  #admin-menu {
-    display: none !important; }
-
-  header {
-    height: 153px; }
-    header .logo {
-      padding: 0;
-      margin: 10px 0 0 0;
-      width: 95px;
-      float: left; }
-      header .logo img {
-        max-width: 100%; }
-    header .view-menu-usuario {
-      margin: 0;
-      position: absolute;
-      top: 20px;
-      right: 40px;
-      width: 55px; }
-      header .view-menu-usuario .views-field-field-nome {
-        display: none; }
-    header .c-hamburger {
-      top: 28px; }
-    header #block-commerce-cart-cart {
-      position: absolute;
-      right: 100px; }
-    header .view-commerce-cart-block {
-      width: 100%; }
-    header .cadastrese {
-      display: none; }
-    header #busca {
-      width: 93%;
-      margin: 76px 0 0 0;
-      left: 0; }
-    header .menu {
-      right: 0;
-      top: 35px;
-      z-index: 50; }
-
-  .not-logged-in header #block-commerce-cart-cart {
-    position: absolute;
-    right: 55px; }
-
+  	/*#admin-menu{display: none !important;}
+  	
+  	header{
+  		height: 153px;
+  		.logo{
+  			padding: 0;
+  			margin: 10px 0 0 0;
+  			width: 95px;
+  			float: left;
+  			img{max-width: 100%;}
+  		}
+  		.view-menu-usuario{
+  			margin: 0;
+  			position: absolute;
+  			top: 20px;
+  			right: 40px;
+  			width: 55px;
+  			.views-field-field-nome{display:none;}
+  		}	
+  		
+  		.c-hamburger{top: 28px;}	
+  
+  		#block-commerce-cart-cart {
+  			position: absolute;
+      		right: 100px;
+  		}	
+  
+  		.view-commerce-cart-block{width: 100%;}
+  		
+  		.cadastrese{display: none;}
+  
+  		#busca{
+  			width: 93%;
+  		    margin: 76px 0 0 0;
+  		    left: 0;
+  		}
+  		.menu {		    
+  		    right: 0;
+  		    top: 35px;
+  		    z-index: 50;
+  		}
+  	}*/
+  /*.not-logged-in{
+  	header{
+  		#block-commerce-cart-cart {
+  			position: absolute;
+      		right: 55px;
+  		}
+  	}
+  }*/
   /*--- HOME --------------------------------------------------------*/
   .front .busca .busca-home {
     bottom: 20%; }

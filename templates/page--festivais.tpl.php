@@ -1,19 +1,21 @@
 <?php include "header.tpl.php"; ?>  
 
   <div class="mapa-festivais">
-    <!--h2>Festivais pelo Brasil</h2-->
-    <?php print views_embed_view('mapa_festivais2','default'); ?>   
+    <?php print views_embed_view('mapa_festivais2','default'); ?> 
+    <?php //print views_embed_view('festivais','attachment_1'); ?> 
+ 
   </div>
 
    
     <!--div class="busca">
         <div class="container">
             <?php
-                $block = module_invoke('views', 'block_view', '-exp-festivais-page_1');
-                print render($block['content']);
+                /*$block = module_invoke('views', 'block_view', '-exp-festivais-page_1');
+                print render($block['content']);*/
             ?>
         </div>
     </div-->
+    
 <div id="principal">
 <section class="conteudo">  
         <div class="container">
@@ -26,8 +28,10 @@
         </div>
         <!-- /.container --> 
 </section>
-</div>
+
 <?php include "footer.tpl.php"; ?>
+
+</div>
 <script type="text/javascript">
 jQuery(document).ready(function ($) {
     /* adiciona detalhes a busca */    
