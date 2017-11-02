@@ -281,16 +281,17 @@ header{
         }
     } 
 
+    
     /* busca*/
     #busca{ 
-        width: 440px;
+        width: 36%;
         margin: 12px 0 15px 25px;
         float: left;
 
         label{display: none;}         
 
         #edit-combine-wrapper{
-            width: 70%;
+            width: 75%;
             float: left;
             padding-right: 0;
         }
@@ -311,10 +312,11 @@ header{
         .views-widget-sort-order{display: none;}
 
         .views-submit-button{
-            width: 30%;
+            width: 25%;
 
             button{                
                 margin-top: 0;
+                width: 100%;
                 height: 40px;
                 padding: 8px 16px;
                 float: left;
@@ -334,15 +336,17 @@ header{
         }
         .views-widget-sort-by{display: none;} 
 
+        @media(max-width:767px){
+            width: 100%;
+            margin: 20px 0 10px 0;
+        }
         @media(min-width:768px)and(max-width:1299px){
             width: 40%;
             margin-bottom: 0;
             margin-right: 0;
-        }   
-        @media(max-width:767px){
-            width: 100%;
-            margin: 20px 0 10px 0;
-        }    
+        } 
+         
+
     } /* busca */
 
     ul.menu-principal{
@@ -493,8 +497,15 @@ header{
         }
 
         @media(max-width:767px){
-            float: left;
+            position: absolute;
+            top: 20px;
+            left: 15px;
+
+            h2{
+                margin-top: 0;
+            }
         }
+
     } /* carrinho */
 
     
@@ -507,7 +518,7 @@ header{
         a{font-weight: normal;}    
 
         .login{                     
-            padding: 12px;
+            padding: 12px 10px;
             margin-top: 0;
             background: transparent;
             color: #fff;
@@ -533,13 +544,16 @@ header{
                 text-decoration: none;
             }
         }
+        @media(max-width:767px){
+            display: none;
+        }
     }/* cadastrese */   
 
     .menu-usuario{
         float: right;
         height: 50px;
-        min-width: 40px;
-        margin: 15px 0 0 15px;
+        min-width: 45px;
+        margin: 15px 0 0 10px;
         border-radius: 4px;
         position: relative;
 
@@ -572,7 +586,11 @@ header{
                 margin: 5px 0;
 
                 img{max-width: 40px;}
-            }             
+            }  
+
+            @media(max-width:767px){
+                display: none;
+            }           
         }         
 
         /* menu hamburguer */
@@ -643,7 +661,11 @@ header{
                 opacity: 1 !important;
             }
         }
-
+        @media(max-width:767px){
+            position: absolute;
+            top:    7px;
+            right: 0;
+        }  
         @media(max-width:1299px){
             margin-left: 0;
         }        
@@ -697,7 +719,7 @@ header{
         .menu-usuario{
             position: absolute;
             right: 0;
-            top: 10px;
+            top: 7px;
         }
     }
 }
@@ -716,8 +738,6 @@ header{
         position: relative;
         float: left;
         width: 100%;
-    
-       
 
         .slick-prev,
            .slick-next{
@@ -737,6 +757,10 @@ header{
           .slick-next{
             right: 0;
             background: url(../img/slick-right.jpg) no-repeat center center;
+          }
+
+          @media(max-width:767px){
+            display: none;
           }
     }    
 
@@ -1014,6 +1038,14 @@ header{
         float: left;
         width: 100%;
         margin: 0 0 50px 0;
+        min-height: 800px;
+
+        @media(max-width:1300px){
+            margin-top: 110px;
+        }
+        @media(min-width:1301px){
+            margin-top: 60px;
+        }
     }
 
     .busca{
@@ -1209,7 +1241,7 @@ header{
         #principal{
             width: 65%;
             float: left;
-            margin: 57px 0 0 0;
+            //margin: 57px 0 0 0;
 
             .container{
                 max-width: 100%;
@@ -1422,13 +1454,23 @@ header{
     }
 
     /* sidebar */
-    .view-festival-data{
+    .info-mapa{
         margin-top: -120px;
+        float: left;
+        width: 100%;
+    }
+    .info-data{
+        margin-top: -1px;
+        float: left;
+        width: 100%;
+    }
+
+    .view-festival-data{
         padding: 15px;
         background: #fff;
         border: 1px solid #eee;
         float: left;
-        width: 100%;
+        width: 100%;        
 
         a{
             padding: 7px 15px;
@@ -1505,7 +1547,7 @@ header{
         }
     }
     .card.send-post{
-        border: 10px solid $salmao1;
+        border: 5px solid $salmao1;
 
         h3{
             font-size: 24px;
@@ -1735,13 +1777,13 @@ header{
     .comment:hover .links.list-inline{opacity: 1;}
 
     .view-empty{
-        width: 100%;
-        //border: 1px solid $salmao1;
-        border: 2px solid $salmao1;
-        //color: #fff;
+        /*width: 100%;
         text-align: center;
         padding: 25px;
         font-style: italic;
+        margin-bottom: 50px;
+        background: #eee;*/
+        display: none;
     }
     
   }
@@ -2242,6 +2284,51 @@ header{
     }
 }
 
+/* popup confima ingresso */  
+    div.messages.commerce-add-to-cart-confirmation{
+        border: none;
+        color: #777;
+
+        .message-inner{
+
+            .added-product-title{
+                font-size: 21px;
+                color: $salmao1;
+                padding-top: 40px;
+            }
+            .commerce-product-sku,
+            .commerce-product-status,
+            .views-field-quantity{
+                display: none;
+            }
+            .commerce-product-title{
+                .commerce-product-title-label{
+                    float: left;
+                    margin-right: 10px;
+                    //color: #999;
+                }
+            }
+            .views-field-commerce-total{
+                span.field-content{
+                    color: $salmao1 !important;
+                }
+            }
+            .button-wrapper{
+                background: #f5f5f5;
+            }
+            .button.checkout a{
+                background-color: $salmao1 !important;
+
+                &:hover{background-color: $marrom !important;}
+            }
+
+        }
+
+        
+    }
+
+    
+    
 
 /*--- PAGINA DO CARRINHO ------------------------------------------------------------*/
 .page-cart{
@@ -2258,6 +2345,17 @@ header{
         }
 
         .cart-empty-page{text-align: center;}
+    }
+
+    @media(max-width:767px){
+        .view-commerce-cart-form{
+            .form-actions{
+                button.btn{
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
     }
 }
 
@@ -2558,10 +2656,38 @@ body.page-legal-accept{
 
 .page-user.not-logged-in{
 
+    header{
+        .logo{
+            float: none;
+            margin: 20px auto 25px auto;
+        }
+        .menu-usuario,
+        .cadastrese,
+        .region-header,
+        #busca,
+        .menu-principal{display: none;}
+    }
+
     #principal{
         float: left;
         width: 100%;
         margin: 50px 0;
+
+        @media(max-width:480px){
+            .nav-tabs{
+                li{
+                    width: 100%;
+                    text-align: center;
+
+                    &.active{
+                        a{
+                            color: #fff;
+                            background: $salmao1;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     #principal .container{max-width: 600px;}
@@ -2616,6 +2742,12 @@ body.page-legal-accept{
     #edit-captcha-response{max-width: 25%;}
 
     #edit-submit{margin-top: 25px;}
+
+    .cadastro-festival{display: none;}
+
+    @media(max-width:767px){
+        footer{display: none;}
+    }
 }
 
 /*--- PAGINA DE UM INGRESSO / TICKET --------------------------------------------*/

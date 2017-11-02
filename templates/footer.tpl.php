@@ -39,26 +39,28 @@
                 <div class="col-sm-3">
 
                     <ul>
+                        <li><a href="http://partiufestival.com/user">Login</a></li>
 
-                        <li><a href="http://partiufestival.com">Sobre o Partiu Festival</a></li>
+                        <li><a href="http://partiufestival.com/user/register">Crie uma Conta</a></li>
 
-                        <li><a href="http://partiufestival.com/termos-e-condi%C3%A7%C3%B5es-de-uso">Termos de Uso</a></li>
+                        <li><a href="http://partiufestival.com/festivais">Encontrar Festivais</a></li>
 
-                        <li class="denunciar"><a href="#" data-toggle="modal" data-target="#denunciar-conteudo">Denunciar Conteúdo Abusivo</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#cadastro-festivais">Cadastre um Festival</a></li>
 
+                        
                     </ul>
 
                 </div>
 
                 <div class="col-sm-3">
 
-                    <ul>
+                    <ul>                        
 
-                        <li><a href="http://partiufestival.com/festivais">Encontrar Festivais</a></li>
+                        <li><a href="http://partiufestival.com">Sobre o Partiu Festival</a></li>
 
-                        <li><a href="#" data-toggle="modal" data-target="#cadastro-festivais">Cadastre um Festival</a></li>
+                        <li><a href="http://partiufestival.com/termos-e-condi%C3%A7%C3%B5es-de-uso">Termos de Uso</a></li>
 
-                        <li><a href="http://partiufestival.com/">Anuncie</a></li>
+                        <li class="denunciar"><a href="#" data-toggle="modal" data-target="#denunciar-conteudo">Denunciar Conteúdo Abusivo</a></li>
 
                         <li><a href="#" data-toggle="modal" data-target="#form-contato">Entre em Contato</a></li>
 

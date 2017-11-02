@@ -256,13 +256,13 @@ header {
       header .logo {
         width: 100%; } }
   header #busca {
-    width: 440px;
+    width: 36%;
     margin: 12px 0 15px 25px;
     float: left; }
     header #busca label {
       display: none; }
     header #busca #edit-combine-wrapper {
-      width: 70%;
+      width: 75%;
       float: left;
       padding-right: 0; }
     header #busca #edit-combine {
@@ -279,9 +279,10 @@ header {
     header #busca .views-widget-sort-order {
       display: none; }
     header #busca .views-submit-button {
-      width: 30%; }
+      width: 25%; }
       header #busca .views-submit-button button {
         margin-top: 0;
+        width: 100%;
         height: 40px;
         padding: 8px 16px;
         float: left;
@@ -298,15 +299,15 @@ header {
           padding-right: 0; } }
     header #busca .views-widget-sort-by {
       display: none; }
+    @media (max-width: 767px) {
+      header #busca {
+        width: 100%;
+        margin: 20px 0 10px 0; } }
     @media (min-width: 768px) and (max-width: 1299px) {
       header #busca {
         width: 40%;
         margin-bottom: 0;
         margin-right: 0; } }
-    @media (max-width: 767px) {
-      header #busca {
-        width: 100%;
-        margin: 20px 0 10px 0; } }
   header ul.menu-principal {
     float: right;
     text-align: right;
@@ -425,7 +426,11 @@ header {
         padding: 15px; }
     @media (max-width: 767px) {
       header #block-commerce-cart-cart {
-        float: left; } }
+        position: absolute;
+        top: 20px;
+        left: 15px; }
+        header #block-commerce-cart-cart h2 {
+          margin-top: 0; } }
   header .cadastrese {
     float: right;
     margin: 18px 0 0 5px;
@@ -434,7 +439,7 @@ header {
     header .cadastrese a {
       font-weight: normal; }
     header .cadastrese .login {
-      padding: 12px;
+      padding: 12px 10px;
       margin-top: 0;
       background: transparent;
       color: #fff;
@@ -454,11 +459,14 @@ header {
         background: #f4645f;
         color: #fff;
         text-decoration: none; }
+    @media (max-width: 767px) {
+      header .cadastrese {
+        display: none; } }
   header .menu-usuario {
     float: right;
     height: 50px;
-    min-width: 40px;
-    margin: 15px 0 0 15px;
+    min-width: 45px;
+    margin: 15px 0 0 10px;
     border-radius: 4px;
     position: relative;
     /* menu hamburguer */
@@ -488,6 +496,9 @@ header {
         margin: 5px 0; }
         header .menu-usuario .view-menu-usuario .views-field-field-foto img {
           max-width: 40px; }
+      @media (max-width: 767px) {
+        header .menu-usuario .view-menu-usuario {
+          display: none; } }
     header .menu-usuario .c-hamburger {
       display: block;
       position: absolute;
@@ -548,6 +559,11 @@ header {
       header .menu-usuario:hover ul.menu {
         height: auto !important;
         opacity: 1 !important; }
+    @media (max-width: 767px) {
+      header .menu-usuario {
+        position: absolute;
+        top: 7px;
+        right: 0; } }
     @media (max-width: 1299px) {
       header .menu-usuario {
         margin-left: 0; } }
@@ -588,7 +604,7 @@ header {
   .not-logged-in .menu-usuario {
     position: absolute;
     right: 0;
-    top: 10px; } }
+    top: 7px; } }
 /*--- HOME -------------------------------------------------------------*/
 .front {
   background: #fff; }
@@ -615,6 +631,9 @@ header {
     .front .container-banner .slick-next {
       right: 0;
       background: url(../img/slick-right.jpg) no-repeat center center; }
+    @media (max-width: 767px) {
+      .front .container-banner {
+        display: none; } }
   .front .topnav {
     font-size: 14px; }
   .front .lead {
@@ -844,7 +863,14 @@ header {
 .page-festivais #principal {
   float: left;
   width: 100%;
-  margin: 0 0 50px 0; }
+  margin: 0 0 50px 0;
+  min-height: 800px; }
+  @media (max-width: 1300px) {
+    .page-festivais #principal {
+      margin-top: 110px; } }
+  @media (min-width: 1301px) {
+    .page-festivais #principal {
+      margin-top: 60px; } }
 .page-festivais .busca {
   width: 100%;
   height: 240px;
@@ -987,8 +1013,7 @@ header {
         height: 100% !important; }
   .page-festivais #principal {
     width: 65%;
-    float: left;
-    margin: 57px 0 0 0; }
+    float: left; }
     .page-festivais #principal .container {
       max-width: 100%; }
   .page-festivais .cadastro-festival .confira-lista {
@@ -1143,8 +1168,15 @@ header {
         margin-bottom: 50px; }
     .node-type-festival .conteudo .views-exposed-form {
       display: none; }
-  .node-type-festival .view-festival-data {
+  .node-type-festival .info-mapa {
     margin-top: -120px;
+    float: left;
+    width: 100%; }
+  .node-type-festival .info-data {
+    margin-top: -1px;
+    float: left;
+    width: 100%; }
+  .node-type-festival .view-festival-data {
     padding: 15px;
     background: #fff;
     border: 1px solid #eee;
@@ -1202,7 +1234,7 @@ header {
     font-size: 18px;
     color: #3f3736; }
   .node-type-festival .card.send-post {
-    border: 10px solid #f4645f; }
+    border: 5px solid #f4645f; }
     .node-type-festival .card.send-post h3 {
       font-size: 24px;
       line-height: 36px; }
@@ -1413,11 +1445,13 @@ header {
     .node-type-festival .conteudo .comment:hover .links.list-inline {
       opacity: 1; }
     .node-type-festival .conteudo .view-empty {
-      width: 100%;
-      border: 2px solid #f4645f;
+      /*width: 100%;
       text-align: center;
       padding: 25px;
-      font-style: italic; }
+      font-style: italic;
+      margin-bottom: 50px;
+      background: #eee;*/
+      display: none; }
   .node-type-festival .extras {
     display: none; }
   .node-type-festival .publicidade img {
@@ -1864,6 +1898,30 @@ header {
       transition: all .3s;
       font-weight: 400; }
 
+/* popup confima ingresso */
+div.messages.commerce-add-to-cart-confirmation {
+  border: none;
+  color: #777; }
+  div.messages.commerce-add-to-cart-confirmation .message-inner .added-product-title {
+    font-size: 21px;
+    color: #f4645f;
+    padding-top: 40px; }
+  div.messages.commerce-add-to-cart-confirmation .message-inner .commerce-product-sku,
+  div.messages.commerce-add-to-cart-confirmation .message-inner .commerce-product-status,
+  div.messages.commerce-add-to-cart-confirmation .message-inner .views-field-quantity {
+    display: none; }
+  div.messages.commerce-add-to-cart-confirmation .message-inner .commerce-product-title .commerce-product-title-label {
+    float: left;
+    margin-right: 10px; }
+  div.messages.commerce-add-to-cart-confirmation .message-inner .views-field-commerce-total span.field-content {
+    color: #f4645f !important; }
+  div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper {
+    background: #f5f5f5; }
+  div.messages.commerce-add-to-cart-confirmation .message-inner .button.checkout a {
+    background-color: #f4645f !important; }
+    div.messages.commerce-add-to-cart-confirmation .message-inner .button.checkout a:hover {
+      background-color: #3f3736 !important; }
+
 /*--- PAGINA DO CARRINHO ------------------------------------------------------------*/
 .page-cart .conteudo {
   float: left;
@@ -1876,6 +1934,10 @@ header {
     font-weight: 600; }
   .page-cart .conteudo .cart-empty-page {
     text-align: center; }
+@media (max-width: 767px) {
+  .page-cart .view-commerce-cart-form .form-actions button.btn {
+    width: 100%;
+    margin-bottom: 20px; } }
 
 /*--- CHECKOUT ---------------------------------------------------------------------*/
 .page-checkout h1 {
@@ -2124,10 +2186,26 @@ body.page-legal-accept .conteudo {
 /*--- LOGIN / CADASTRO -----------------------------------------------------------*/
 .page-user.not-logged-in {
   /* criacao de conta do usuario */ }
+  .page-user.not-logged-in header .logo {
+    float: none;
+    margin: 20px auto 25px auto; }
+  .page-user.not-logged-in header .menu-usuario,
+  .page-user.not-logged-in header .cadastrese,
+  .page-user.not-logged-in header .region-header,
+  .page-user.not-logged-in header #busca,
+  .page-user.not-logged-in header .menu-principal {
+    display: none; }
   .page-user.not-logged-in #principal {
     float: left;
     width: 100%;
     margin: 50px 0; }
+    @media (max-width: 480px) {
+      .page-user.not-logged-in #principal .nav-tabs li {
+        width: 100%;
+        text-align: center; }
+        .page-user.not-logged-in #principal .nav-tabs li.active a {
+          color: #fff;
+          background: #f4645f; } }
   .page-user.not-logged-in #principal .container {
     max-width: 600px; }
   .page-user.not-logged-in .facebook-action-connect {
@@ -2173,6 +2251,11 @@ body.page-legal-accept .conteudo {
     max-width: 25%; }
   .page-user.not-logged-in #edit-submit {
     margin-top: 25px; }
+  .page-user.not-logged-in .cadastro-festival {
+    display: none; }
+  @media (max-width: 767px) {
+    .page-user.not-logged-in footer {
+      display: none; } }
 
 /*--- PAGINA DE UM INGRESSO / TICKET --------------------------------------------*/
 .ticket-individual .view-ticket-individual-voucher .ticket-print {
